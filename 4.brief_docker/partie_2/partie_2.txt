@@ -1,0 +1,52 @@
+Partie 2 : Découverte de Docker-Compose (Architecture multi-conteneurs)
+
+Informations à définir dans le fichier docker-compose.yml pour configurer un conteneur PostgreSQL :
+
+
+L'image PostgreSQL à utiliser (image: postgres).
+Les variables d'environnement pour définir les informations de base (comme POSTGRES_USER, POSTGRES_PASSWORD, POSTGRES_DB).
+Le volume pour persister les données (volumes).
+Les ports à exposer (ports).
+À quoi sert la directive depends_on dans un fichier docker-compose.yml ? :
+Elle définit l'ordre de démarrage des services, en garantissant que le service dépendant (ex : Flask) ne démarre qu'après le service PostgreSQL.
+Comment vous assurer que votre API Flask est correctement connectée à la base de données PostgreSQL ? :
+
+
+Vérifiez la configuration de connexion dans l’API Flask (URL, utilisateur, mot de passe).
+Utilisez les logs de l’API Flask pour confirmer qu’elle peut se connecter à PostgreSQL sans erreur.
+Que fait la commande docker-compose up --build ? :
+
+
+Elle construit les images des services à partir des Dockerfiles (si nécessaire) et démarre les conteneurs définis dans le fichier docker-compose.yml.
+Comment vérifier que l’API Flask renvoie la bonne réponse depuis le navigateur ou via un outil comme curl ? :
+
+
+Ouvrez l’URL du service Flask dans le navigateur ou utilisez curl pour envoyer des requêtes HTTP à l'API (ex. curl http://localhost:5000).
+Pourquoi est-il recommandé d’utiliser Docker-Compose au lieu de démarrer manuellement chaque conteneur avec Docker ? :
+
+
+Docker-Compose simplifie la gestion d'architectures multi-conteneurs en automatisant la configuration, le démarrage, l’arrêt, et la mise à jour des services, rendant l’environnement plus cohérent et reproductible.
+
+Reponse à la commande : 
+curl http://localhost:5000/data
+
+[
+  [
+    1,
+    "Alice",
+    "Manager",
+    "80000.00"
+  ],
+  [
+    2,
+    "Bob",
+    "Developer",
+    "60000.00"
+  ],
+  [
+    3,
+    "Charlie",
+    "Designer",
+    "55000.00"
+  ]
+]

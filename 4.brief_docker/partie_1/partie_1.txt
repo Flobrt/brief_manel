@@ -1,0 +1,25 @@
+Partie 1 : Découverte de Docker (Création d’une image Docker basique)
+
+Étapes pour construire une image Docker à partir d’un fichier Dockerfile :
+Créer un fichier Dockerfile avec les instructions nécessaires.
+Utiliser la commande docker build pour générer l’image à partir du Dockerfile.
+
+Rôle de la commande docker build et exemple de syntaxe :
+La commande docker build construit une image à partir d’un Dockerfile.
+Exemple : docker build -t monimage .
+
+Différence entre les instructions FROM, WORKDIR et CMD dans un Dockerfile :
+FROM : Définit l’image de base à utiliser.
+WORKDIR : Définit le répertoire de travail à l’intérieur du conteneur.
+CMD : Spécifie la commande par défaut à exécuter lorsqu'un conteneur est lancé.
+
+Importance de spécifier une image de base :
+L’image de base fournit l’environnement et les dépendances nécessaires pour exécuter le code, comme un système d’exploitation ou une application (par ex. Python, Node.js).
+
+Exécuter un conteneur basé sur l’image construite :
+Utilisez la commande docker run pour lancer un conteneur à partir de l’image construite.
+Exemple : docker run -d monimage
+
+Que faire si vous modifiez le fichier source Python utilisé dans le conteneur ?:
+Vous devez reconstruire l’image avec docker build pour inclure les modifications.
+Ensuite, recréez et redémarrez le conteneur avec docker run.
