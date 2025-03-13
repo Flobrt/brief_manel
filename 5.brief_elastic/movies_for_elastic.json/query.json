@@ -1,0 +1,10 @@
+{
+    "query": {
+        "range": {
+        "fields.rating": {
+            "gte": 8.5,
+            "lte": 9.0
+            }
+        }
+    }
+}
