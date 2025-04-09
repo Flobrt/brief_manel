@@ -58,7 +58,7 @@ services:
     depends_on:
       - elasticsearch
     environment:
-      - ELASTICSEARCH_HOST=elasticsearch:9200  # Adresse d'Elasticsearch
+      - ELASTICSEARCH_HOST=elasticsearch:9200 
     
 volumes:
   es-logs:
