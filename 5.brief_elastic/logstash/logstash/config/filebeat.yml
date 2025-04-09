@@ -1,0 +1,19 @@
+filebeat.inputs:
+  - type: log
+    paths:
+      - /usr/share/elasticsearch/logs/gc.log*
+    fields:
+      log_type: gc_log 
+
+output.elasticsearch:
+  hosts: ["http://elasticsearch:9200"] # Adresse d'Elasticsearch
+  index: "filebeat-%{+yyyy.MM.dd}"  # Index dans Elasticsearch
+
+setup.template.name: "filebeat"
+setup.template.pattern: "filebeat-*"
+
+setup.kibana:
+  host: "kibana:5601"  # Adresse de Kibana (pour la configuration de Filebeat si nécessaire)
+
+logging:
+  level: info

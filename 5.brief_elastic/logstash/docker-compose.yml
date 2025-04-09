@@ -8,6 +8,8 @@ services:
     ports:
       - "9200:9200"
       - "9300:9300"
+    volumes:
+      - es-logs:/usr/share/elasticsearch/logs
 
   kibana:
     image: docker.elastic.co/kibana/kibana:8.6.2
@@ -43,3 +45,21 @@ services:
     ports:
       - "5044:5044"  
       - "9600:9600"  
+
+  filebeat:
+    image: docker.elastic.co/beats/filebeat:8.6.2
+    container_name: filebeat
+    user: root
+    volumes:
+      - ./logstash/config/filebeat.yml:/usr/share/filebeat/filebeat.yml
+      - es-logs:/usr/share/elasticsearch/logs:ro
+    networks:
+      - default
+    depends_on:
+      - elasticsearch
+    environment:
+      - ELASTICSEARCH_HOST=elasticsearch:9200  # Adresse d'Elasticsearch
+    
+volumes:
+  es-logs:
+

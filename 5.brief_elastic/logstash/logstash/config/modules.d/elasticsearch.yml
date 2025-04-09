@@ -1,0 +1,4 @@
+- module: elasticsearch
+  log:
+    enabled: true
+    var.paths: ["/home/florian/code/alternance/brief_manel/5.brief_elastic/logstash/logs/elasticsearch/*.log"]
