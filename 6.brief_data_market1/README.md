@@ -62,7 +62,7 @@ assets/               # Dossier pour les ressources statiques (images, etc.)
 1. **Cloner le dépôt :**
 
 ```bash
-git clone https://github.com/ton-utilisateur/ton-projet.git
+git clone https://github.com/Flobrt/brief_manel/tree/main/6.brief_data_market1
 cd ton-projet
 ```
 2. **Installer les dépendances :**
