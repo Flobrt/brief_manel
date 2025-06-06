@@ -29,11 +29,17 @@ Ce projet a été réalisé dans le cadre d’un exercice de data analyse et vis
 
 ## 🧱 Architecture de l'application
 
+
+```plaintext
 L'application est structurée de manière modulaire dans un dossier `app/`, avec les fichiers suivants :
 app/
-├── __init__.py     # Rend le dossier app importable comme un module Python
-├── app.py          # Point d'entrée principal de l'application Streamlit
-├── function.py     # Fonctions utilitaires pour requêter l'API et traiter les données
+├── __init__.py       # Rend le dossier app importable comme un module Python
+├── app.py            # Point d'entrée principal de l'application Streamlit
+├── functions.py      # Fonctions utilitaires pour requêter l'API et traiter les données
+└── requirements.txt  # Liste des dépendances nécessaires
+assets/               # Dossier pour les ressources statiques (images, etc.)
+└── image.png         # Image utilisée dans le README
+```
 
 ---
 
