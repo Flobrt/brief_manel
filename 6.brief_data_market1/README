@@ -4,8 +4,6 @@
 
 Ce projet a été réalisé dans le cadre d’un exercice de data analyse et visualisation. L’objectif est de proposer une application simple permettant à un utilisateur de **vérifier la qualité nutritionnelle et environnementale des produits alimentaires** qu’il envisage d’acheter.
 
-Dans une société où la transparence sur les produits de consommation est de plus en plus demandée, cette application vise à démocratiser l'accès aux **informations essentielles** telles que le **Nutri-Score** et l’**Eco-Score** à partir de la base de données ouverte **Open Food Facts**.
-
 ---
 
 ## ❓ Problématique
@@ -43,20 +41,13 @@ app/
 
 - 🔍 Recherche par nom de produit.
 - 🧾 Affichage des données principales : 
-  - Nom du produit
-  - Marque
-  - Nutri-Score
-  - Eco-Score
-  - Quantité
-  - Ingrédients (si disponibles)
+  - Brand
+  - Lang
+  - Nutrition Grade (Nutri-Score)
+  - Ecoscore_grade (Eco-Score)
+  - Product_name
 - ⚠️ Gestion des données manquantes ou non trouvées.
 - 📁 Export des résultats en CSV ou JSON.
-
----
-
-## 🖼️ Aperçu de l'application
-
-*(Insérez ici une capture d’écran ou un GIF de démonstration)*
 
 ---
 
