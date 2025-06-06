@@ -30,8 +30,8 @@ Ce projet a été réalisé dans le cadre d’un exercice de data analyse et vis
 ## 🧱 Architecture de l'application
 
 
-```plaintext
 L'application est structurée de manière modulaire dans un dossier `app/`, avec les fichiers suivants :
+```plaintext
 app/
 ├── __init__.py       # Rend le dossier app importable comme un module Python
 ├── app.py            # Point d'entrée principal de l'application Streamlit

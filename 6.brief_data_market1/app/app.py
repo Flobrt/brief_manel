@@ -1,5 +1,4 @@
 import streamlit as st
-import pandas as pd
 from functions import resquet_name
 
 
