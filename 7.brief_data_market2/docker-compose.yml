@@ -1,0 +1,29 @@
+services:
+  mariadb:
+    image: mariadb:11
+    container_name: mariadb
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: produitsdb
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+    volumes:
+      - mariadb_data:/var/lib/mysql
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    ports:
+      - "3306:3306"
+
+  streamlit:
+    build: ./app
+    container_name: streamlit_app
+    restart: always
+    depends_on:
+      - mariadb
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./app/:/app
+
+volumes:
+  mariadb_data:
