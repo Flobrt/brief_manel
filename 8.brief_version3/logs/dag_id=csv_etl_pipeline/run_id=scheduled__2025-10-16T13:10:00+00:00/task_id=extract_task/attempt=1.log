@@ -1,0 +1,14 @@
+[2025-10-16T13:11:00.898+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: csv_etl_pipeline.extract_task scheduled__2025-10-16T13:10:00+00:00 [queued]>
+[2025-10-16T13:11:00.906+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: csv_etl_pipeline.extract_task scheduled__2025-10-16T13:10:00+00:00 [queued]>
+[2025-10-16T13:11:00.906+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 1
+[2025-10-16T13:11:00.919+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): extract_task> on 2025-10-16 13:10:00+00:00
+[2025-10-16T13:11:00.924+0000] {standard_task_runner.py:57} INFO - Started process 119 to run task
+[2025-10-16T13:11:00.929+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'csv_etl_pipeline', 'extract_task', 'scheduled__2025-10-16T13:10:00+00:00', '--job-id', '7', '--raw', '--subdir', 'DAGS_FOLDER/etl.py', '--cfg-path', '/tmp/tmpgottwnas']
+[2025-10-16T13:11:00.929+0000] {standard_task_runner.py:85} INFO - Job 7: Subtask extract_task
+[2025-10-16T13:11:00.979+0000] {task_command.py:410} INFO - Running <TaskInstance: csv_etl_pipeline.extract_task scheduled__2025-10-16T13:10:00+00:00 [running]> on host 98254aa9055c
+[2025-10-16T13:11:01.051+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='csv_etl_pipeline' AIRFLOW_CTX_TASK_ID='extract_task' AIRFLOW_CTX_EXECUTION_DATE='2025-10-16T13:10:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-10-16T13:10:00+00:00'
+[2025-10-16T13:11:01.062+0000] {logging_mixin.py:149} INFO - Nombre de jeux : 1
+[2025-10-16T13:11:01.064+0000] {python.py:183} INFO - Done. Returned value was: {"id":{"0":1},"urlgame":{"0":"https:\/\/www.instant-gaming.com\/en\/8003-buy-celeste-pc-mac-game-steam\/"},"game":{"0":"Celeste"}}
+[2025-10-16T13:11:01.089+0000] {taskinstance.py:1350} INFO - Marking task as SUCCESS. dag_id=csv_etl_pipeline, task_id=extract_task, execution_date=20251016T131000, start_date=20251016T131100, end_date=20251016T131101
+[2025-10-16T13:11:01.139+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2025-10-16T13:11:01.171+0000] {taskinstance.py:2651} INFO - 1 downstream tasks scheduled from follow-on schedule check

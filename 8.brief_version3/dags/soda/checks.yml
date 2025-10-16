@@ -1,0 +1,9 @@
+checks for games:
+  - row_count > 0
+  - missing_count(game) = 0
+  - duplicate_count(urlgame) = 0
+
+checks for prices:
+  - row_count = 0
+  - missing_count(price) = 0
+  - invalid_count(price) = 0

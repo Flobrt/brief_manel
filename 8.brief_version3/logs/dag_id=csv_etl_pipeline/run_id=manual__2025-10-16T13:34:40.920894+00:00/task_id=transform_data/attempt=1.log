@@ -1,0 +1,13 @@
+[2025-10-16T13:34:47.120+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: csv_etl_pipeline.transform_data manual__2025-10-16T13:34:40.920894+00:00 [queued]>
+[2025-10-16T13:34:47.127+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: csv_etl_pipeline.transform_data manual__2025-10-16T13:34:40.920894+00:00 [queued]>
+[2025-10-16T13:34:47.127+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 1
+[2025-10-16T13:34:47.140+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): transform_data> on 2025-10-16 13:34:40.920894+00:00
+[2025-10-16T13:34:47.145+0000] {standard_task_runner.py:57} INFO - Started process 116 to run task
+[2025-10-16T13:34:47.149+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'csv_etl_pipeline', 'transform_data', 'manual__2025-10-16T13:34:40.920894+00:00', '--job-id', '9', '--raw', '--subdir', 'DAGS_FOLDER/etl.py', '--cfg-path', '/tmp/tmpsu60fnuv']
+[2025-10-16T13:34:47.150+0000] {standard_task_runner.py:85} INFO - Job 9: Subtask transform_data
+[2025-10-16T13:34:47.190+0000] {task_command.py:410} INFO - Running <TaskInstance: csv_etl_pipeline.transform_data manual__2025-10-16T13:34:40.920894+00:00 [running]> on host 977278e068a9
+[2025-10-16T13:34:47.270+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='csv_etl_pipeline' AIRFLOW_CTX_TASK_ID='transform_data' AIRFLOW_CTX_EXECUTION_DATE='2025-10-16T13:34:40.920894+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-10-16T13:34:40.920894+00:00'
+[2025-10-16T13:34:47.292+0000] {python.py:183} INFO - Done. Returned value was: {"id":{"0":1,"1":2,"2":3},"prix":{"0":6.65,"1":12.99,"2":28.59},"logdate":{"0":"2025-10-16T13:34:45.723115","1":"2025-10-16T13:34:45.723115","2":"2025-10-16T13:34:45.723115"}}
+[2025-10-16T13:34:47.312+0000] {taskinstance.py:1350} INFO - Marking task as SUCCESS. dag_id=csv_etl_pipeline, task_id=transform_data, execution_date=20251016T133440, start_date=20251016T133447, end_date=20251016T133447
+[2025-10-16T13:34:47.360+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2025-10-16T13:34:47.380+0000] {taskinstance.py:2651} INFO - 1 downstream tasks scheduled from follow-on schedule check

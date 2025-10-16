@@ -1,0 +1,84 @@
+[2025-10-16T13:33:39.423+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: csv_etl_pipeline.request_api scheduled__2025-10-15T20:00:00+00:00 [queued]>
+[2025-10-16T13:33:39.431+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: csv_etl_pipeline.request_api scheduled__2025-10-15T20:00:00+00:00 [queued]>
+[2025-10-16T13:33:39.431+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 1
+[2025-10-16T13:33:39.444+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): request_api> on 2025-10-15 20:00:00+00:00
+[2025-10-16T13:33:39.450+0000] {standard_task_runner.py:57} INFO - Started process 83 to run task
+[2025-10-16T13:33:39.455+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'csv_etl_pipeline', 'request_api', 'scheduled__2025-10-15T20:00:00+00:00', '--job-id', '4', '--raw', '--subdir', 'DAGS_FOLDER/etl.py', '--cfg-path', '/tmp/tmp7encjvl7']
+[2025-10-16T13:33:39.455+0000] {standard_task_runner.py:85} INFO - Job 4: Subtask request_api
+[2025-10-16T13:33:39.508+0000] {task_command.py:410} INFO - Running <TaskInstance: csv_etl_pipeline.request_api scheduled__2025-10-15T20:00:00+00:00 [running]> on host 977278e068a9
+[2025-10-16T13:33:39.583+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='csv_etl_pipeline' AIRFLOW_CTX_TASK_ID='request_api' AIRFLOW_CTX_EXECUTION_DATE='2025-10-15T20:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-10-15T20:00:00+00:00'
+[2025-10-16T13:33:39.595+0000] {logging_mixin.py:149} INFO - {"id":{"0":1,"1":2,"2":3},"urlgame":{"0":"https:\/\/www.instant-gaming.com\/en\/8003-buy-celeste-pc-mac-game-steam\/","1":"https:\/\/www.instant-gaming.com\/en\/2198-buy-hollow-knight-pc-mac-steam\/","2":"https:\/\/www.instant-gaming.com\/en\/4824-buy-elden-ring-pc-steam\/"},"game":{"0":"Celeste","1":"Hollow Knight","2":"Elden ring"}}
+[2025-10-16T13:33:41.112+0000] {python.py:183} INFO - Done. Returned value was: {"id":{"0":1,"1":2,"2":3},"prix":{"0":6.65,"1":12.99,"2":28.59},"logdate":{"0":"2025-10-16T13:33:41.107981","1":"2025-10-16T13:33:41.107981","2":"2025-10-16T13:33:41.107981"}}
+[2025-10-16T13:33:41.296+0000] {taskinstance.py:1350} INFO - Marking task as SUCCESS. dag_id=csv_etl_pipeline, task_id=request_api, execution_date=20251015T200000, start_date=20251016T133339, end_date=20251016T133341
+[2025-10-16T13:33:41.352+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2025-10-16T13:33:41.375+0000] {taskinstance.py:2651} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-10-16T14:27:00.922+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: csv_etl_pipeline.request_api scheduled__2025-10-15T20:00:00+00:00 [queued]>
+[2025-10-16T14:27:00.931+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: csv_etl_pipeline.request_api scheduled__2025-10-15T20:00:00+00:00 [queued]>
+[2025-10-16T14:27:00.932+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 1
+[2025-10-16T14:27:00.944+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): request_api> on 2025-10-15 20:00:00+00:00
+[2025-10-16T14:27:00.950+0000] {standard_task_runner.py:57} INFO - Started process 83 to run task
+[2025-10-16T14:27:00.954+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'csv_etl_pipeline', 'request_api', 'scheduled__2025-10-15T20:00:00+00:00', '--job-id', '4', '--raw', '--subdir', 'DAGS_FOLDER/etl.py', '--cfg-path', '/tmp/tmpmbk3xltx']
+[2025-10-16T14:27:00.955+0000] {standard_task_runner.py:85} INFO - Job 4: Subtask request_api
+[2025-10-16T14:27:01.006+0000] {task_command.py:410} INFO - Running <TaskInstance: csv_etl_pipeline.request_api scheduled__2025-10-15T20:00:00+00:00 [running]> on host e072a881a620
+[2025-10-16T14:27:01.076+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='csv_etl_pipeline' AIRFLOW_CTX_TASK_ID='request_api' AIRFLOW_CTX_EXECUTION_DATE='2025-10-15T20:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-10-15T20:00:00+00:00'
+[2025-10-16T14:27:01.088+0000] {logging_mixin.py:149} INFO - {"id":{"0":1,"1":2,"2":3},"urlgame":{"0":"https:\/\/www.instant-gaming.com\/en\/8003-buy-celeste-pc-mac-game-steam\/","1":"https:\/\/www.instant-gaming.com\/en\/2198-buy-hollow-knight-pc-mac-steam\/","2":"https:\/\/www.instant-gaming.com\/en\/4824-buy-elden-ring-pc-steam\/"},"game":{"0":"Celeste","1":"Hollow Knight","2":"Elden ring"}}
+[2025-10-16T14:27:02.686+0000] {python.py:183} INFO - Done. Returned value was: {"id":{"0":1,"1":2,"2":3},"prix":{"0":6.65,"1":12.99,"2":28.59},"logdate":{"0":"2025-10-16T14:27:02.680138","1":"2025-10-16T14:27:02.680138","2":"2025-10-16T14:27:02.680138"}}
+[2025-10-16T14:27:02.882+0000] {taskinstance.py:1350} INFO - Marking task as SUCCESS. dag_id=csv_etl_pipeline, task_id=request_api, execution_date=20251015T200000, start_date=20251016T142700, end_date=20251016T142702
+[2025-10-16T14:27:02.906+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2025-10-16T14:27:02.931+0000] {taskinstance.py:2651} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-10-16T14:34:47.723+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: csv_etl_pipeline.request_api scheduled__2025-10-15T20:00:00+00:00 [queued]>
+[2025-10-16T14:34:47.735+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: csv_etl_pipeline.request_api scheduled__2025-10-15T20:00:00+00:00 [queued]>
+[2025-10-16T14:34:47.736+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 1
+[2025-10-16T14:34:47.754+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): request_api> on 2025-10-15 20:00:00+00:00
+[2025-10-16T14:34:47.762+0000] {standard_task_runner.py:57} INFO - Started process 83 to run task
+[2025-10-16T14:34:47.768+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'csv_etl_pipeline', 'request_api', 'scheduled__2025-10-15T20:00:00+00:00', '--job-id', '4', '--raw', '--subdir', 'DAGS_FOLDER/etl.py', '--cfg-path', '/tmp/tmpyabbdp4i']
+[2025-10-16T14:34:47.768+0000] {standard_task_runner.py:85} INFO - Job 4: Subtask request_api
+[2025-10-16T14:34:47.837+0000] {task_command.py:410} INFO - Running <TaskInstance: csv_etl_pipeline.request_api scheduled__2025-10-15T20:00:00+00:00 [running]> on host 44e366da6235
+[2025-10-16T14:34:47.924+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='csv_etl_pipeline' AIRFLOW_CTX_TASK_ID='request_api' AIRFLOW_CTX_EXECUTION_DATE='2025-10-15T20:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-10-15T20:00:00+00:00'
+[2025-10-16T14:34:47.940+0000] {logging_mixin.py:149} INFO - {"id":{"0":1,"1":2,"2":3},"urlgame":{"0":"https:\/\/www.instant-gaming.com\/en\/8003-buy-celeste-pc-mac-game-steam\/","1":"https:\/\/www.instant-gaming.com\/en\/2198-buy-hollow-knight-pc-mac-steam\/","2":"https:\/\/www.instant-gaming.com\/en\/4824-buy-elden-ring-pc-steam\/"},"game":{"0":"Celeste","1":"Hollow Knight","2":"Elden ring"}}
+[2025-10-16T14:34:49.869+0000] {python.py:183} INFO - Done. Returned value was: {"id":{"0":1,"1":2,"2":3},"prix":{"0":6.65,"1":12.99,"2":28.59},"logdate":{"0":"2025-10-16T14:34:49.862049","1":"2025-10-16T14:34:49.862049","2":"2025-10-16T14:34:49.862049"}}
+[2025-10-16T14:34:50.147+0000] {taskinstance.py:1350} INFO - Marking task as SUCCESS. dag_id=csv_etl_pipeline, task_id=request_api, execution_date=20251015T200000, start_date=20251016T143447, end_date=20251016T143450
+[2025-10-16T14:34:50.187+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2025-10-16T14:34:50.218+0000] {taskinstance.py:2651} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-10-16T15:10:44.658+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: csv_etl_pipeline.request_api scheduled__2025-10-15T20:00:00+00:00 [queued]>
+[2025-10-16T15:10:44.665+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: csv_etl_pipeline.request_api scheduled__2025-10-15T20:00:00+00:00 [queued]>
+[2025-10-16T15:10:44.666+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2025-10-16T15:10:44.674+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): request_api> on 2025-10-15 20:00:00+00:00
+[2025-10-16T15:10:44.680+0000] {standard_task_runner.py:57} INFO - Started process 77 to run task
+[2025-10-16T15:10:44.683+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'csv_etl_pipeline', 'request_api', 'scheduled__2025-10-15T20:00:00+00:00', '--job-id', '4', '--raw', '--subdir', 'DAGS_FOLDER/etl.py', '--cfg-path', '/tmp/tmpv6x73heh']
+[2025-10-16T15:10:44.684+0000] {standard_task_runner.py:85} INFO - Job 4: Subtask request_api
+[2025-10-16T15:10:44.727+0000] {task_command.py:416} INFO - Running <TaskInstance: csv_etl_pipeline.request_api scheduled__2025-10-15T20:00:00+00:00 [running]> on host 9632773e4775
+[2025-10-16T15:10:44.788+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='csv_etl_pipeline' AIRFLOW_CTX_TASK_ID='request_api' AIRFLOW_CTX_EXECUTION_DATE='2025-10-15T20:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-10-15T20:00:00+00:00'
+[2025-10-16T15:10:44.799+0000] {logging_mixin.py:154} INFO - {"id":{"0":1,"1":2,"2":3},"urlgame":{"0":"https:\/\/www.instant-gaming.com\/en\/8003-buy-celeste-pc-mac-game-steam\/","1":"https:\/\/www.instant-gaming.com\/en\/2198-buy-hollow-knight-pc-mac-steam\/","2":"https:\/\/www.instant-gaming.com\/en\/4824-buy-elden-ring-pc-steam\/"},"game":{"0":"Celeste","1":"Hollow Knight","2":"Elden ring"}}
+[2025-10-16T15:10:46.558+0000] {python.py:194} INFO - Done. Returned value was: {"id":{"0":1,"1":2,"2":3},"prix":{"0":6.65,"1":12.99,"2":28.59},"logdate":{"0":"2025-10-16T15:10:46.552877","1":"2025-10-16T15:10:46.552877","2":"2025-10-16T15:10:46.552877"}}
+[2025-10-16T15:10:46.577+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=csv_etl_pipeline, task_id=request_api, execution_date=20251015T200000, start_date=20251016T151044, end_date=20251016T151046
+[2025-10-16T15:10:46.622+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-10-16T15:10:46.644+0000] {taskinstance.py:2778} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-10-16T15:14:16.857+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: csv_etl_pipeline.request_api scheduled__2025-10-15T20:00:00+00:00 [queued]>
+[2025-10-16T15:14:16.863+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: csv_etl_pipeline.request_api scheduled__2025-10-15T20:00:00+00:00 [queued]>
+[2025-10-16T15:14:16.864+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2025-10-16T15:14:16.874+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): request_api> on 2025-10-15 20:00:00+00:00
+[2025-10-16T15:14:16.881+0000] {standard_task_runner.py:57} INFO - Started process 78 to run task
+[2025-10-16T15:14:16.885+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'csv_etl_pipeline', 'request_api', 'scheduled__2025-10-15T20:00:00+00:00', '--job-id', '4', '--raw', '--subdir', 'DAGS_FOLDER/etl.py', '--cfg-path', '/tmp/tmptadjuhg2']
+[2025-10-16T15:14:16.887+0000] {standard_task_runner.py:85} INFO - Job 4: Subtask request_api
+[2025-10-16T15:14:16.939+0000] {task_command.py:416} INFO - Running <TaskInstance: csv_etl_pipeline.request_api scheduled__2025-10-15T20:00:00+00:00 [running]> on host db55547a7972
+[2025-10-16T15:14:17.003+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='csv_etl_pipeline' AIRFLOW_CTX_TASK_ID='request_api' AIRFLOW_CTX_EXECUTION_DATE='2025-10-15T20:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-10-15T20:00:00+00:00'
+[2025-10-16T15:14:17.013+0000] {logging_mixin.py:154} INFO - {"id":{"0":1,"1":2,"2":3},"urlgame":{"0":"https:\/\/www.instant-gaming.com\/en\/8003-buy-celeste-pc-mac-game-steam\/","1":"https:\/\/www.instant-gaming.com\/en\/2198-buy-hollow-knight-pc-mac-steam\/","2":"https:\/\/www.instant-gaming.com\/en\/4824-buy-elden-ring-pc-steam\/"},"game":{"0":"Celeste","1":"Hollow Knight","2":"Elden ring"}}
+[2025-10-16T15:14:18.680+0000] {python.py:194} INFO - Done. Returned value was: {"id":{"0":1,"1":2,"2":3},"prix":{"0":6.65,"1":12.99,"2":28.59},"logdate":{"0":"2025-10-16T15:14:18.678559","1":"2025-10-16T15:14:18.678559","2":"2025-10-16T15:14:18.678559"}}
+[2025-10-16T15:14:18.700+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=csv_etl_pipeline, task_id=request_api, execution_date=20251015T200000, start_date=20251016T151416, end_date=20251016T151418
+[2025-10-16T15:14:18.744+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-10-16T15:14:18.765+0000] {taskinstance.py:2778} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-10-16T15:17:51.423+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: csv_etl_pipeline.request_api scheduled__2025-10-15T20:00:00+00:00 [queued]>
+[2025-10-16T15:17:51.439+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: csv_etl_pipeline.request_api scheduled__2025-10-15T20:00:00+00:00 [queued]>
+[2025-10-16T15:17:51.440+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2025-10-16T15:17:51.461+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): request_api> on 2025-10-15 20:00:00+00:00
+[2025-10-16T15:17:51.467+0000] {standard_task_runner.py:57} INFO - Started process 77 to run task
+[2025-10-16T15:17:51.470+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'csv_etl_pipeline', 'request_api', 'scheduled__2025-10-15T20:00:00+00:00', '--job-id', '4', '--raw', '--subdir', 'DAGS_FOLDER/etl.py', '--cfg-path', '/tmp/tmppw1uw9xv']
+[2025-10-16T15:17:51.471+0000] {standard_task_runner.py:85} INFO - Job 4: Subtask request_api
+[2025-10-16T15:17:51.520+0000] {task_command.py:416} INFO - Running <TaskInstance: csv_etl_pipeline.request_api scheduled__2025-10-15T20:00:00+00:00 [running]> on host b4e3001b90ac
+[2025-10-16T15:17:51.607+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='csv_etl_pipeline' AIRFLOW_CTX_TASK_ID='request_api' AIRFLOW_CTX_EXECUTION_DATE='2025-10-15T20:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-10-15T20:00:00+00:00'
+[2025-10-16T15:17:51.620+0000] {logging_mixin.py:154} INFO - {"id":{"0":1,"1":2,"2":3},"urlgame":{"0":"https:\/\/www.instant-gaming.com\/en\/8003-buy-celeste-pc-mac-game-steam\/","1":"https:\/\/www.instant-gaming.com\/en\/2198-buy-hollow-knight-pc-mac-steam\/","2":"https:\/\/www.instant-gaming.com\/en\/4824-buy-elden-ring-pc-steam\/"},"game":{"0":"Celeste","1":"Hollow Knight","2":"Elden ring"}}
+[2025-10-16T15:17:53.472+0000] {python.py:194} INFO - Done. Returned value was: {"id":{"0":1,"1":2,"2":3},"prix":{"0":6.65,"1":12.99,"2":28.59},"logdate":{"0":"2025-10-16T15:17:53.469937","1":"2025-10-16T15:17:53.469937","2":"2025-10-16T15:17:53.469937"}}
+[2025-10-16T15:17:53.492+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=csv_etl_pipeline, task_id=request_api, execution_date=20251015T200000, start_date=20251016T151751, end_date=20251016T151753
+[2025-10-16T15:17:53.529+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-10-16T15:17:53.549+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check

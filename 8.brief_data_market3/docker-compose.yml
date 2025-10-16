@@ -1,0 +1,46 @@
+services:
+  mariadb:
+    image: mariadb:11
+    container_name: mariadb
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: produitsdb
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+    volumes:
+      - mariadb_data:/var/lib/mysql
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    ports:
+      - "3308:3308"
+
+  streamlit:
+    build: ./app
+    container_name: streamlit_app_2
+    restart: always
+    depends_on:
+      - mariadb
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./app/:/app
+
+  flask_api:
+    build: ./api   # ← dossier de ton API Flask
+    container_name: flask_api
+    restart: always
+    depends_on:
+      - mariadb
+    environment:
+      DB_USER: user
+      DB_PASSWORD: password
+      DB_HOST: mariadb
+      DB_PORT: 3306
+      DB_NAME: produitsdb
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./api/:/app
+
+volumes:
+  mariadb_data:
