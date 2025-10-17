@@ -1,0 +1,168 @@
+[2025-10-17T08:08:55.886+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: csv_etl_pipeline.init_pipline scheduled__2025-10-16T20:00:00+00:00 [queued]>
+[2025-10-17T08:08:55.895+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: csv_etl_pipeline.init_pipline scheduled__2025-10-16T20:00:00+00:00 [queued]>
+[2025-10-17T08:08:55.896+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2025-10-17T08:08:55.906+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): init_pipline> on 2025-10-16 20:00:00+00:00
+[2025-10-17T08:08:55.913+0000] {standard_task_runner.py:57} INFO - Started process 74 to run task
+[2025-10-17T08:08:55.917+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'csv_etl_pipeline', 'init_pipline', 'scheduled__2025-10-16T20:00:00+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/etl.py', '--cfg-path', '/tmp/tmpls_jdizf']
+[2025-10-17T08:08:55.918+0000] {standard_task_runner.py:85} INFO - Job 3: Subtask init_pipline
+[2025-10-17T08:08:55.965+0000] {task_command.py:416} INFO - Running <TaskInstance: csv_etl_pipeline.init_pipline scheduled__2025-10-16T20:00:00+00:00 [running]> on host b7bfdf78a159
+[2025-10-17T08:08:56.039+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='csv_etl_pipeline' AIRFLOW_CTX_TASK_ID='init_pipline' AIRFLOW_CTX_EXECUTION_DATE='2025-10-16T20:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-10-16T20:00:00+00:00'
+[2025-10-17T08:08:56.051+0000] {logging_mixin.py:154} INFO - Nombre de jeux : 3
+[2025-10-17T08:08:56.053+0000] {python.py:194} INFO - Done. Returned value was: {"id":{"0":1,"1":2,"2":3},"urlgame":{"0":"https:\/\/www.instant-gaming.com\/en\/8003-buy-celeste-pc-mac-game-steam\/","1":"https:\/\/www.instant-gaming.com\/en\/2198-buy-hollow-knight-pc-mac-steam\/","2":"https:\/\/www.instant-gaming.com\/en\/4824-buy-elden-ring-pc-steam\/"},"game":{"0":"Celeste","1":"Hollow Knight","2":"Elden ring"}}
+[2025-10-17T08:08:56.078+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=csv_etl_pipeline, task_id=init_pipline, execution_date=20251016T200000, start_date=20251017T080855, end_date=20251017T080856
+[2025-10-17T08:08:56.128+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-10-17T08:08:56.150+0000] {taskinstance.py:2778} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-10-17T08:12:38.073+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: csv_etl_pipeline.init_pipline scheduled__2025-10-16T20:00:00+00:00 [queued]>
+[2025-10-17T08:12:38.084+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: csv_etl_pipeline.init_pipline scheduled__2025-10-16T20:00:00+00:00 [queued]>
+[2025-10-17T08:12:38.084+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2025-10-17T08:12:38.097+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): init_pipline> on 2025-10-16 20:00:00+00:00
+[2025-10-17T08:12:38.106+0000] {standard_task_runner.py:57} INFO - Started process 74 to run task
+[2025-10-17T08:12:38.111+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'csv_etl_pipeline', 'init_pipline', 'scheduled__2025-10-16T20:00:00+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/etl.py', '--cfg-path', '/tmp/tmp5cf8kq1z']
+[2025-10-17T08:12:38.113+0000] {standard_task_runner.py:85} INFO - Job 3: Subtask init_pipline
+[2025-10-17T08:12:38.183+0000] {task_command.py:416} INFO - Running <TaskInstance: csv_etl_pipeline.init_pipline scheduled__2025-10-16T20:00:00+00:00 [running]> on host 532d771fe9a3
+[2025-10-17T08:12:38.302+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='csv_etl_pipeline' AIRFLOW_CTX_TASK_ID='init_pipline' AIRFLOW_CTX_EXECUTION_DATE='2025-10-16T20:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-10-16T20:00:00+00:00'
+[2025-10-17T08:12:38.314+0000] {logging_mixin.py:154} INFO - Nombre de jeux : 3
+[2025-10-17T08:12:38.316+0000] {python.py:194} INFO - Done. Returned value was: {"id":{"0":1,"1":2,"2":3},"urlgame":{"0":"https:\/\/www.instant-gaming.com\/en\/8003-buy-celeste-pc-mac-game-steam\/","1":"https:\/\/www.instant-gaming.com\/en\/2198-buy-hollow-knight-pc-mac-steam\/","2":"https:\/\/www.instant-gaming.com\/en\/4824-buy-elden-ring-pc-steam\/"},"game":{"0":"Celeste","1":"Hollow Knight","2":"Elden ring"}}
+[2025-10-17T08:12:38.343+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=csv_etl_pipeline, task_id=init_pipline, execution_date=20251016T200000, start_date=20251017T081238, end_date=20251017T081238
+[2025-10-17T08:12:38.405+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-10-17T08:12:38.440+0000] {taskinstance.py:2778} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-10-17T08:14:51.733+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: csv_etl_pipeline.init_pipline scheduled__2025-10-16T20:00:00+00:00 [queued]>
+[2025-10-17T08:14:51.740+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: csv_etl_pipeline.init_pipline scheduled__2025-10-16T20:00:00+00:00 [queued]>
+[2025-10-17T08:14:51.740+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2025-10-17T08:14:51.750+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): init_pipline> on 2025-10-16 20:00:00+00:00
+[2025-10-17T08:14:51.756+0000] {standard_task_runner.py:57} INFO - Started process 73 to run task
+[2025-10-17T08:14:51.760+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'csv_etl_pipeline', 'init_pipline', 'scheduled__2025-10-16T20:00:00+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/etl.py', '--cfg-path', '/tmp/tmp_9eecqbh']
+[2025-10-17T08:14:51.765+0000] {standard_task_runner.py:85} INFO - Job 3: Subtask init_pipline
+[2025-10-17T08:14:51.814+0000] {task_command.py:416} INFO - Running <TaskInstance: csv_etl_pipeline.init_pipline scheduled__2025-10-16T20:00:00+00:00 [running]> on host e82aa66f271e
+[2025-10-17T08:14:51.881+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='csv_etl_pipeline' AIRFLOW_CTX_TASK_ID='init_pipline' AIRFLOW_CTX_EXECUTION_DATE='2025-10-16T20:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-10-16T20:00:00+00:00'
+[2025-10-17T08:14:51.888+0000] {logging_mixin.py:154} INFO - Nombre de jeux : 3
+[2025-10-17T08:14:51.889+0000] {python.py:194} INFO - Done. Returned value was: {"id":{"0":1,"1":2,"2":3},"urlgame":{"0":"https:\/\/www.instant-gaming.com\/en\/8003-buy-celeste-pc-mac-game-steam\/","1":"https:\/\/www.instant-gaming.com\/en\/2198-buy-hollow-knight-pc-mac-steam\/","2":"https:\/\/www.instant-gaming.com\/en\/4824-buy-elden-ring-pc-steam\/"},"game":{"0":"Celeste","1":"Hollow Knight","2":"Elden ring"}}
+[2025-10-17T08:14:51.907+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=csv_etl_pipeline, task_id=init_pipline, execution_date=20251016T200000, start_date=20251017T081451, end_date=20251017T081451
+[2025-10-17T08:14:51.933+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-10-17T08:14:51.956+0000] {taskinstance.py:2778} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-10-17T08:28:16.997+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: csv_etl_pipeline.init_pipline scheduled__2025-10-16T20:00:00+00:00 [queued]>
+[2025-10-17T08:28:17.004+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: csv_etl_pipeline.init_pipline scheduled__2025-10-16T20:00:00+00:00 [queued]>
+[2025-10-17T08:28:17.004+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2025-10-17T08:28:17.015+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): init_pipline> on 2025-10-16 20:00:00+00:00
+[2025-10-17T08:28:17.021+0000] {standard_task_runner.py:57} INFO - Started process 74 to run task
+[2025-10-17T08:28:17.025+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'csv_etl_pipeline', 'init_pipline', 'scheduled__2025-10-16T20:00:00+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/etl.py', '--cfg-path', '/tmp/tmpwa5afrsj']
+[2025-10-17T08:28:17.029+0000] {standard_task_runner.py:85} INFO - Job 3: Subtask init_pipline
+[2025-10-17T08:28:17.077+0000] {task_command.py:416} INFO - Running <TaskInstance: csv_etl_pipeline.init_pipline scheduled__2025-10-16T20:00:00+00:00 [running]> on host 0912e2f8d1fc
+[2025-10-17T08:28:17.139+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='csv_etl_pipeline' AIRFLOW_CTX_TASK_ID='init_pipline' AIRFLOW_CTX_EXECUTION_DATE='2025-10-16T20:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-10-16T20:00:00+00:00'
+[2025-10-17T08:28:17.146+0000] {logging_mixin.py:154} INFO - Nombre de jeux : 3
+[2025-10-17T08:28:17.147+0000] {python.py:194} INFO - Done. Returned value was: {"id":{"0":1,"1":2,"2":3},"urlgame":{"0":"https:\/\/www.instant-gaming.com\/en\/8003-buy-celeste-pc-mac-game-steam\/","1":"https:\/\/www.instant-gaming.com\/en\/2198-buy-hollow-knight-pc-mac-steam\/","2":"https:\/\/www.instant-gaming.com\/en\/4824-buy-elden-ring-pc-steam\/"},"game":{"0":"Celeste","1":"Hollow Knight","2":"Elden ring"}}
+[2025-10-17T08:28:17.166+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=csv_etl_pipeline, task_id=init_pipline, execution_date=20251016T200000, start_date=20251017T082816, end_date=20251017T082817
+[2025-10-17T08:28:17.196+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-10-17T08:28:17.217+0000] {taskinstance.py:2778} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-10-17T08:41:48.227+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: csv_etl_pipeline.init_pipline scheduled__2025-10-16T20:00:00+00:00 [queued]>
+[2025-10-17T08:41:48.233+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: csv_etl_pipeline.init_pipline scheduled__2025-10-16T20:00:00+00:00 [queued]>
+[2025-10-17T08:41:48.234+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2025-10-17T08:41:48.243+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): init_pipline> on 2025-10-16 20:00:00+00:00
+[2025-10-17T08:41:48.249+0000] {standard_task_runner.py:57} INFO - Started process 74 to run task
+[2025-10-17T08:41:48.252+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'csv_etl_pipeline', 'init_pipline', 'scheduled__2025-10-16T20:00:00+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/etl.py', '--cfg-path', '/tmp/tmp2ilt665q']
+[2025-10-17T08:41:48.256+0000] {standard_task_runner.py:85} INFO - Job 3: Subtask init_pipline
+[2025-10-17T08:41:48.298+0000] {task_command.py:416} INFO - Running <TaskInstance: csv_etl_pipeline.init_pipline scheduled__2025-10-16T20:00:00+00:00 [running]> on host c22c7f7cd908
+[2025-10-17T08:41:48.359+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='csv_etl_pipeline' AIRFLOW_CTX_TASK_ID='init_pipline' AIRFLOW_CTX_EXECUTION_DATE='2025-10-16T20:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-10-16T20:00:00+00:00'
+[2025-10-17T08:41:48.366+0000] {logging_mixin.py:154} INFO - Nombre de jeux : 3
+[2025-10-17T08:41:48.367+0000] {python.py:194} INFO - Done. Returned value was: {"id":{"0":1,"1":2,"2":3},"urlgame":{"0":"https:\/\/www.instant-gaming.com\/en\/8003-buy-celeste-pc-mac-game-steam\/","1":"https:\/\/www.instant-gaming.com\/en\/2198-buy-hollow-knight-pc-mac-steam\/","2":"https:\/\/www.instant-gaming.com\/en\/4824-buy-elden-ring-pc-steam\/"},"game":{"0":"Celeste","1":"Hollow Knight","2":"Elden ring"}}
+[2025-10-17T08:41:48.386+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=csv_etl_pipeline, task_id=init_pipline, execution_date=20251016T200000, start_date=20251017T084148, end_date=20251017T084148
+[2025-10-17T08:41:48.424+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-10-17T08:41:48.456+0000] {taskinstance.py:2778} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-10-17T08:44:03.637+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: csv_etl_pipeline.init_pipline scheduled__2025-10-16T20:00:00+00:00 [queued]>
+[2025-10-17T08:44:03.644+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: csv_etl_pipeline.init_pipline scheduled__2025-10-16T20:00:00+00:00 [queued]>
+[2025-10-17T08:44:03.644+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2025-10-17T08:44:03.654+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): init_pipline> on 2025-10-16 20:00:00+00:00
+[2025-10-17T08:44:03.661+0000] {standard_task_runner.py:57} INFO - Started process 74 to run task
+[2025-10-17T08:44:03.665+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'csv_etl_pipeline', 'init_pipline', 'scheduled__2025-10-16T20:00:00+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/etl.py', '--cfg-path', '/tmp/tmpm1d2m73o']
+[2025-10-17T08:44:03.669+0000] {standard_task_runner.py:85} INFO - Job 3: Subtask init_pipline
+[2025-10-17T08:44:03.719+0000] {task_command.py:416} INFO - Running <TaskInstance: csv_etl_pipeline.init_pipline scheduled__2025-10-16T20:00:00+00:00 [running]> on host 41c1f4dd29f1
+[2025-10-17T08:44:03.783+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='csv_etl_pipeline' AIRFLOW_CTX_TASK_ID='init_pipline' AIRFLOW_CTX_EXECUTION_DATE='2025-10-16T20:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-10-16T20:00:00+00:00'
+[2025-10-17T08:44:03.790+0000] {logging_mixin.py:154} INFO - Nombre de jeux : 3
+[2025-10-17T08:44:03.790+0000] {python.py:194} INFO - Done. Returned value was: {"id":{"0":1,"1":2,"2":3},"urlgame":{"0":"https:\/\/www.instant-gaming.com\/en\/8003-buy-celeste-pc-mac-game-steam\/","1":"https:\/\/www.instant-gaming.com\/en\/2198-buy-hollow-knight-pc-mac-steam\/","2":"https:\/\/www.instant-gaming.com\/en\/4824-buy-elden-ring-pc-steam\/"},"game":{"0":"Celeste","1":"Hollow Knight","2":"Elden ring"}}
+[2025-10-17T08:44:03.809+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=csv_etl_pipeline, task_id=init_pipline, execution_date=20251016T200000, start_date=20251017T084403, end_date=20251017T084403
+[2025-10-17T08:44:03.837+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-10-17T08:44:03.864+0000] {taskinstance.py:2778} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-10-17T08:45:20.799+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: csv_etl_pipeline.init_pipline scheduled__2025-10-16T20:00:00+00:00 [queued]>
+[2025-10-17T08:45:20.806+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: csv_etl_pipeline.init_pipline scheduled__2025-10-16T20:00:00+00:00 [queued]>
+[2025-10-17T08:45:20.806+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2025-10-17T08:45:20.816+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): init_pipline> on 2025-10-16 20:00:00+00:00
+[2025-10-17T08:45:20.821+0000] {standard_task_runner.py:57} INFO - Started process 74 to run task
+[2025-10-17T08:45:20.825+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'csv_etl_pipeline', 'init_pipline', 'scheduled__2025-10-16T20:00:00+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/etl.py', '--cfg-path', '/tmp/tmp8b0_627w']
+[2025-10-17T08:45:20.829+0000] {standard_task_runner.py:85} INFO - Job 3: Subtask init_pipline
+[2025-10-17T08:45:20.878+0000] {task_command.py:416} INFO - Running <TaskInstance: csv_etl_pipeline.init_pipline scheduled__2025-10-16T20:00:00+00:00 [running]> on host e6d798efe4b0
+[2025-10-17T08:45:20.944+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='csv_etl_pipeline' AIRFLOW_CTX_TASK_ID='init_pipline' AIRFLOW_CTX_EXECUTION_DATE='2025-10-16T20:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-10-16T20:00:00+00:00'
+[2025-10-17T08:45:20.951+0000] {logging_mixin.py:154} INFO - Nombre de jeux : 3
+[2025-10-17T08:45:20.952+0000] {python.py:194} INFO - Done. Returned value was: {"id":{"0":1,"1":2,"2":3},"urlgame":{"0":"https:\/\/www.instant-gaming.com\/en\/8003-buy-celeste-pc-mac-game-steam\/","1":"https:\/\/www.instant-gaming.com\/en\/2198-buy-hollow-knight-pc-mac-steam\/","2":"https:\/\/www.instant-gaming.com\/en\/4824-buy-elden-ring-pc-steam\/"},"game":{"0":"Celeste","1":"Hollow Knight","2":"Elden ring"}}
+[2025-10-17T08:45:20.970+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=csv_etl_pipeline, task_id=init_pipline, execution_date=20251016T200000, start_date=20251017T084520, end_date=20251017T084520
+[2025-10-17T08:45:20.997+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-10-17T08:45:21.018+0000] {taskinstance.py:2778} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-10-17T08:47:14.186+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: csv_etl_pipeline.init_pipline scheduled__2025-10-16T20:00:00+00:00 [queued]>
+[2025-10-17T08:47:14.195+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: csv_etl_pipeline.init_pipline scheduled__2025-10-16T20:00:00+00:00 [queued]>
+[2025-10-17T08:47:14.196+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2025-10-17T08:47:14.207+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): init_pipline> on 2025-10-16 20:00:00+00:00
+[2025-10-17T08:47:14.213+0000] {standard_task_runner.py:57} INFO - Started process 74 to run task
+[2025-10-17T08:47:14.217+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'csv_etl_pipeline', 'init_pipline', 'scheduled__2025-10-16T20:00:00+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/etl.py', '--cfg-path', '/tmp/tmpx8zmwosw']
+[2025-10-17T08:47:14.220+0000] {standard_task_runner.py:85} INFO - Job 3: Subtask init_pipline
+[2025-10-17T08:47:14.266+0000] {task_command.py:416} INFO - Running <TaskInstance: csv_etl_pipeline.init_pipline scheduled__2025-10-16T20:00:00+00:00 [running]> on host e39668730f63
+[2025-10-17T08:47:14.338+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='csv_etl_pipeline' AIRFLOW_CTX_TASK_ID='init_pipline' AIRFLOW_CTX_EXECUTION_DATE='2025-10-16T20:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-10-16T20:00:00+00:00'
+[2025-10-17T08:47:14.346+0000] {logging_mixin.py:154} INFO - Nombre de jeux : 3
+[2025-10-17T08:47:14.347+0000] {python.py:194} INFO - Done. Returned value was: {"id":{"0":1,"1":2,"2":3},"urlgame":{"0":"https:\/\/www.instant-gaming.com\/en\/8003-buy-celeste-pc-mac-game-steam\/","1":"https:\/\/www.instant-gaming.com\/en\/2198-buy-hollow-knight-pc-mac-steam\/","2":"https:\/\/www.instant-gaming.com\/en\/4824-buy-elden-ring-pc-steam\/"},"game":{"0":"Celeste","1":"Hollow Knight","2":"Elden ring"}}
+[2025-10-17T08:47:14.369+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=csv_etl_pipeline, task_id=init_pipline, execution_date=20251016T200000, start_date=20251017T084714, end_date=20251017T084714
+[2025-10-17T08:47:14.389+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-10-17T08:47:14.416+0000] {taskinstance.py:2778} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-10-17T08:51:29.255+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: csv_etl_pipeline.init_pipline scheduled__2025-10-16T20:00:00+00:00 [queued]>
+[2025-10-17T08:51:29.262+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: csv_etl_pipeline.init_pipline scheduled__2025-10-16T20:00:00+00:00 [queued]>
+[2025-10-17T08:51:29.263+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2025-10-17T08:51:29.272+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): init_pipline> on 2025-10-16 20:00:00+00:00
+[2025-10-17T08:51:29.279+0000] {standard_task_runner.py:57} INFO - Started process 74 to run task
+[2025-10-17T08:51:29.282+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'csv_etl_pipeline', 'init_pipline', 'scheduled__2025-10-16T20:00:00+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/etl.py', '--cfg-path', '/tmp/tmpvo47mjuk']
+[2025-10-17T08:51:29.286+0000] {standard_task_runner.py:85} INFO - Job 3: Subtask init_pipline
+[2025-10-17T08:51:29.338+0000] {task_command.py:416} INFO - Running <TaskInstance: csv_etl_pipeline.init_pipline scheduled__2025-10-16T20:00:00+00:00 [running]> on host 37d538dfd0b6
+[2025-10-17T08:51:29.405+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='csv_etl_pipeline' AIRFLOW_CTX_TASK_ID='init_pipline' AIRFLOW_CTX_EXECUTION_DATE='2025-10-16T20:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-10-16T20:00:00+00:00'
+[2025-10-17T08:51:29.413+0000] {logging_mixin.py:154} INFO - Nombre de jeux : 3
+[2025-10-17T08:51:29.414+0000] {python.py:194} INFO - Done. Returned value was: {"id":{"0":1,"1":2,"2":3},"urlgame":{"0":"https:\/\/www.instant-gaming.com\/en\/8003-buy-celeste-pc-mac-game-steam\/","1":"https:\/\/www.instant-gaming.com\/en\/2198-buy-hollow-knight-pc-mac-steam\/","2":"https:\/\/www.instant-gaming.com\/en\/4824-buy-elden-ring-pc-steam\/"},"game":{"0":"Celeste","1":"Hollow Knight","2":"Elden ring"}}
+[2025-10-17T08:51:29.436+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=csv_etl_pipeline, task_id=init_pipline, execution_date=20251016T200000, start_date=20251017T085129, end_date=20251017T085129
+[2025-10-17T08:51:29.454+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-10-17T08:51:29.481+0000] {taskinstance.py:2778} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-10-17T08:54:50.163+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: csv_etl_pipeline.init_pipline scheduled__2025-10-16T20:00:00+00:00 [queued]>
+[2025-10-17T08:54:50.170+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: csv_etl_pipeline.init_pipline scheduled__2025-10-16T20:00:00+00:00 [queued]>
+[2025-10-17T08:54:50.170+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2025-10-17T08:54:50.180+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): init_pipline> on 2025-10-16 20:00:00+00:00
+[2025-10-17T08:54:50.187+0000] {standard_task_runner.py:57} INFO - Started process 74 to run task
+[2025-10-17T08:54:50.190+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'csv_etl_pipeline', 'init_pipline', 'scheduled__2025-10-16T20:00:00+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/etl.py', '--cfg-path', '/tmp/tmpfi0gxcjv']
+[2025-10-17T08:54:50.194+0000] {standard_task_runner.py:85} INFO - Job 3: Subtask init_pipline
+[2025-10-17T08:54:50.238+0000] {task_command.py:416} INFO - Running <TaskInstance: csv_etl_pipeline.init_pipline scheduled__2025-10-16T20:00:00+00:00 [running]> on host 7a3806afa772
+[2025-10-17T08:54:50.298+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='csv_etl_pipeline' AIRFLOW_CTX_TASK_ID='init_pipline' AIRFLOW_CTX_EXECUTION_DATE='2025-10-16T20:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-10-16T20:00:00+00:00'
+[2025-10-17T08:54:50.306+0000] {logging_mixin.py:154} INFO - Nombre de jeux : 3
+[2025-10-17T08:54:50.307+0000] {python.py:194} INFO - Done. Returned value was: {"id":{"0":1,"1":2,"2":3},"urlgame":{"0":"https:\/\/www.instant-gaming.com\/en\/8003-buy-celeste-pc-mac-game-steam\/","1":"https:\/\/www.instant-gaming.com\/en\/2198-buy-hollow-knight-pc-mac-steam\/","2":"https:\/\/www.instant-gaming.com\/en\/4824-buy-elden-ring-pc-steam\/"},"game":{"0":"Celeste","1":"Hollow Knight","2":"Elden ring"}}
+[2025-10-17T08:54:50.327+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=csv_etl_pipeline, task_id=init_pipline, execution_date=20251016T200000, start_date=20251017T085450, end_date=20251017T085450
+[2025-10-17T08:54:50.362+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-10-17T08:54:50.385+0000] {taskinstance.py:2778} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-10-17T09:02:30.944+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: csv_etl_pipeline.init_pipline scheduled__2025-10-16T20:00:00+00:00 [queued]>
+[2025-10-17T09:02:30.951+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: csv_etl_pipeline.init_pipline scheduled__2025-10-16T20:00:00+00:00 [queued]>
+[2025-10-17T09:02:30.951+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2025-10-17T09:02:30.961+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): init_pipline> on 2025-10-16 20:00:00+00:00
+[2025-10-17T09:02:30.969+0000] {standard_task_runner.py:57} INFO - Started process 74 to run task
+[2025-10-17T09:02:30.972+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'csv_etl_pipeline', 'init_pipline', 'scheduled__2025-10-16T20:00:00+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/etl.py', '--cfg-path', '/tmp/tmphx4e_0iy']
+[2025-10-17T09:02:30.976+0000] {standard_task_runner.py:85} INFO - Job 3: Subtask init_pipline
+[2025-10-17T09:02:31.028+0000] {task_command.py:416} INFO - Running <TaskInstance: csv_etl_pipeline.init_pipline scheduled__2025-10-16T20:00:00+00:00 [running]> on host 53e08e0285d6
+[2025-10-17T09:02:31.099+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='csv_etl_pipeline' AIRFLOW_CTX_TASK_ID='init_pipline' AIRFLOW_CTX_EXECUTION_DATE='2025-10-16T20:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-10-16T20:00:00+00:00'
+[2025-10-17T09:02:31.107+0000] {logging_mixin.py:154} INFO - Nombre de jeux : 3
+[2025-10-17T09:02:31.108+0000] {python.py:194} INFO - Done. Returned value was: {"id":{"0":1,"1":2,"2":3},"urlgame":{"0":"https:\/\/www.instant-gaming.com\/en\/8003-buy-celeste-pc-mac-game-steam\/","1":"https:\/\/www.instant-gaming.com\/en\/2198-buy-hollow-knight-pc-mac-steam\/","2":"https:\/\/www.instant-gaming.com\/en\/4824-buy-elden-ring-pc-steam\/"},"game":{"0":"Celeste","1":"Hollow Knight","2":"Elden ring"}}
+[2025-10-17T09:02:31.127+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=csv_etl_pipeline, task_id=init_pipline, execution_date=20251016T200000, start_date=20251017T090230, end_date=20251017T090231
+[2025-10-17T09:02:31.144+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-10-17T09:02:31.167+0000] {taskinstance.py:2778} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-10-17T09:09:01.357+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: csv_etl_pipeline.init_pipline scheduled__2025-10-16T20:00:00+00:00 [queued]>
+[2025-10-17T09:09:01.368+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: csv_etl_pipeline.init_pipline scheduled__2025-10-16T20:00:00+00:00 [queued]>
+[2025-10-17T09:09:01.369+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2025-10-17T09:09:01.382+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): init_pipline> on 2025-10-16 20:00:00+00:00
+[2025-10-17T09:09:01.388+0000] {standard_task_runner.py:57} INFO - Started process 78 to run task
+[2025-10-17T09:09:01.393+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'csv_etl_pipeline', 'init_pipline', 'scheduled__2025-10-16T20:00:00+00:00', '--job-id', '4', '--raw', '--subdir', 'DAGS_FOLDER/etl.py', '--cfg-path', '/tmp/tmpren3h1an']
+[2025-10-17T09:09:01.397+0000] {standard_task_runner.py:85} INFO - Job 4: Subtask init_pipline
+[2025-10-17T09:09:01.449+0000] {task_command.py:416} INFO - Running <TaskInstance: csv_etl_pipeline.init_pipline scheduled__2025-10-16T20:00:00+00:00 [running]> on host 0c9ee2dc6164
+[2025-10-17T09:09:01.537+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='csv_etl_pipeline' AIRFLOW_CTX_TASK_ID='init_pipline' AIRFLOW_CTX_EXECUTION_DATE='2025-10-16T20:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-10-16T20:00:00+00:00'
+[2025-10-17T09:09:01.549+0000] {logging_mixin.py:154} INFO - Nombre de jeux : 3
+[2025-10-17T09:09:01.551+0000] {python.py:194} INFO - Done. Returned value was: {"id":{"0":1,"1":2,"2":3},"urlgame":{"0":"https:\/\/www.instant-gaming.com\/en\/8003-buy-celeste-pc-mac-game-steam\/","1":"https:\/\/www.instant-gaming.com\/en\/2198-buy-hollow-knight-pc-mac-steam\/","2":"https:\/\/www.instant-gaming.com\/en\/4824-buy-elden-ring-pc-steam\/"},"game":{"0":"Celeste","1":"Hollow Knight","2":"Elden ring"}}
+[2025-10-17T09:09:01.582+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=csv_etl_pipeline, task_id=init_pipline, execution_date=20251016T200000, start_date=20251017T090901, end_date=20251017T090901
+[2025-10-17T09:09:01.644+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-10-17T09:09:01.670+0000] {taskinstance.py:2778} INFO - 1 downstream tasks scheduled from follow-on schedule check

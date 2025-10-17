@@ -1,0 +1,104 @@
+[2025-10-17T07:19:53.651+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: csv_etl_pipeline.transform_data scheduled__2025-10-16T08:00:00+00:00 [queued]>
+[2025-10-17T07:19:53.659+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: csv_etl_pipeline.transform_data scheduled__2025-10-16T08:00:00+00:00 [queued]>
+[2025-10-17T07:19:53.659+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2025-10-17T07:19:53.668+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): transform_data> on 2025-10-16 08:00:00+00:00
+[2025-10-17T07:19:53.674+0000] {standard_task_runner.py:57} INFO - Started process 169 to run task
+[2025-10-17T07:19:53.677+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'csv_etl_pipeline', 'transform_data', 'scheduled__2025-10-16T08:00:00+00:00', '--job-id', '10', '--raw', '--subdir', 'DAGS_FOLDER/etl.py', '--cfg-path', '/tmp/tmpixsnpx1w']
+[2025-10-17T07:19:53.678+0000] {standard_task_runner.py:85} INFO - Job 10: Subtask transform_data
+[2025-10-17T07:19:53.721+0000] {task_command.py:416} INFO - Running <TaskInstance: csv_etl_pipeline.transform_data scheduled__2025-10-16T08:00:00+00:00 [running]> on host b4e3001b90ac
+[2025-10-17T07:19:53.790+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='csv_etl_pipeline' AIRFLOW_CTX_TASK_ID='transform_data' AIRFLOW_CTX_EXECUTION_DATE='2025-10-16T08:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-10-16T08:00:00+00:00'
+[2025-10-17T07:19:53.813+0000] {python.py:194} INFO - Done. Returned value was: {"id":{"0":1,"1":2,"2":3},"prix":{"0":6.65,"1":12.99,"2":28.59},"logdate":{"0":"2025-10-17T07:19:52.631962","1":"2025-10-17T07:19:52.631962","2":"2025-10-17T07:19:52.631962"}}
+[2025-10-17T07:19:53.834+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=csv_etl_pipeline, task_id=transform_data, execution_date=20251016T080000, start_date=20251017T071953, end_date=20251017T071953
+[2025-10-17T07:19:53.890+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-10-17T07:19:53.909+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-10-17T07:30:32.458+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: csv_etl_pipeline.transform_data scheduled__2025-10-16T08:00:00+00:00 [queued]>
+[2025-10-17T07:30:32.475+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: csv_etl_pipeline.transform_data scheduled__2025-10-16T08:00:00+00:00 [queued]>
+[2025-10-17T07:30:32.476+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2025-10-17T07:30:32.495+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): transform_data> on 2025-10-16 08:00:00+00:00
+[2025-10-17T07:30:32.505+0000] {standard_task_runner.py:57} INFO - Started process 99 to run task
+[2025-10-17T07:30:32.511+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'csv_etl_pipeline', 'transform_data', 'scheduled__2025-10-16T08:00:00+00:00', '--job-id', '6', '--raw', '--subdir', 'DAGS_FOLDER/etl.py', '--cfg-path', '/tmp/tmpz54fdavj']
+[2025-10-17T07:30:32.513+0000] {standard_task_runner.py:85} INFO - Job 6: Subtask transform_data
+[2025-10-17T07:30:32.585+0000] {task_command.py:416} INFO - Running <TaskInstance: csv_etl_pipeline.transform_data scheduled__2025-10-16T08:00:00+00:00 [running]> on host 3e9356fa6f1e
+[2025-10-17T07:30:32.690+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='csv_etl_pipeline' AIRFLOW_CTX_TASK_ID='transform_data' AIRFLOW_CTX_EXECUTION_DATE='2025-10-16T08:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-10-16T08:00:00+00:00'
+[2025-10-17T07:30:32.723+0000] {python.py:194} INFO - Done. Returned value was: {"id":{"0":1,"1":2,"2":3},"prix":{"0":6.65,"1":12.99,"2":28.59},"logdate":{"0":"2025-10-17T07:30:30.288618","1":"2025-10-17T07:30:30.288618","2":"2025-10-17T07:30:30.288618"}}
+[2025-10-17T07:30:32.755+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=csv_etl_pipeline, task_id=transform_data, execution_date=20251016T080000, start_date=20251017T073032, end_date=20251017T073032
+[2025-10-17T07:30:32.803+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-10-17T07:30:32.836+0000] {taskinstance.py:2778} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-10-17T07:35:55.477+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: csv_etl_pipeline.transform_data scheduled__2025-10-16T08:00:00+00:00 [queued]>
+[2025-10-17T07:35:55.483+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: csv_etl_pipeline.transform_data scheduled__2025-10-16T08:00:00+00:00 [queued]>
+[2025-10-17T07:35:55.484+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2025-10-17T07:35:55.492+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): transform_data> on 2025-10-16 08:00:00+00:00
+[2025-10-17T07:35:55.498+0000] {standard_task_runner.py:57} INFO - Started process 99 to run task
+[2025-10-17T07:35:55.502+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'csv_etl_pipeline', 'transform_data', 'scheduled__2025-10-16T08:00:00+00:00', '--job-id', '6', '--raw', '--subdir', 'DAGS_FOLDER/etl.py', '--cfg-path', '/tmp/tmpmi2zjf1y']
+[2025-10-17T07:35:55.503+0000] {standard_task_runner.py:85} INFO - Job 6: Subtask transform_data
+[2025-10-17T07:35:55.543+0000] {task_command.py:416} INFO - Running <TaskInstance: csv_etl_pipeline.transform_data scheduled__2025-10-16T08:00:00+00:00 [running]> on host 61152302af13
+[2025-10-17T07:35:55.603+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='csv_etl_pipeline' AIRFLOW_CTX_TASK_ID='transform_data' AIRFLOW_CTX_EXECUTION_DATE='2025-10-16T08:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-10-16T08:00:00+00:00'
+[2025-10-17T07:35:55.621+0000] {python.py:194} INFO - Done. Returned value was: {"id":{"0":1,"1":2,"2":3},"prix":{"0":6.65,"1":12.99,"2":28.59},"logdate":{"0":"2025-10-17T07:35:50.603587","1":"2025-10-17T07:35:50.603587","2":"2025-10-17T07:35:50.603587"}}
+[2025-10-17T07:35:55.638+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=csv_etl_pipeline, task_id=transform_data, execution_date=20251016T080000, start_date=20251017T073555, end_date=20251017T073555
+[2025-10-17T07:35:55.673+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-10-17T07:35:55.693+0000] {taskinstance.py:2778} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-10-17T07:38:56.676+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: csv_etl_pipeline.transform_data scheduled__2025-10-16T08:00:00+00:00 [queued]>
+[2025-10-17T07:38:56.683+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: csv_etl_pipeline.transform_data scheduled__2025-10-16T08:00:00+00:00 [queued]>
+[2025-10-17T07:38:56.683+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2025-10-17T07:38:56.692+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): transform_data> on 2025-10-16 08:00:00+00:00
+[2025-10-17T07:38:56.697+0000] {standard_task_runner.py:57} INFO - Started process 92 to run task
+[2025-10-17T07:38:56.701+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'csv_etl_pipeline', 'transform_data', 'scheduled__2025-10-16T08:00:00+00:00', '--job-id', '6', '--raw', '--subdir', 'DAGS_FOLDER/etl.py', '--cfg-path', '/tmp/tmpkp0szdt_']
+[2025-10-17T07:38:56.702+0000] {standard_task_runner.py:85} INFO - Job 6: Subtask transform_data
+[2025-10-17T07:38:56.745+0000] {task_command.py:416} INFO - Running <TaskInstance: csv_etl_pipeline.transform_data scheduled__2025-10-16T08:00:00+00:00 [running]> on host 5c52d2b137c6
+[2025-10-17T07:38:56.805+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='csv_etl_pipeline' AIRFLOW_CTX_TASK_ID='transform_data' AIRFLOW_CTX_EXECUTION_DATE='2025-10-16T08:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-10-16T08:00:00+00:00'
+[2025-10-17T07:38:56.824+0000] {python.py:194} INFO - Done. Returned value was: {"id":{"0":1,"1":2,"2":3},"prix":{"0":6.65,"1":12.99,"2":28.59},"logdate":{"0":"2025-10-17T07:38:51.671563","1":"2025-10-17T07:38:51.671563","2":"2025-10-17T07:38:51.671563"}}
+[2025-10-17T07:38:56.841+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=csv_etl_pipeline, task_id=transform_data, execution_date=20251016T080000, start_date=20251017T073856, end_date=20251017T073856
+[2025-10-17T07:38:56.872+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-10-17T07:38:56.894+0000] {taskinstance.py:2778} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-10-17T07:42:38.143+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: csv_etl_pipeline.transform_data scheduled__2025-10-16T08:00:00+00:00 [queued]>
+[2025-10-17T07:42:38.156+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: csv_etl_pipeline.transform_data scheduled__2025-10-16T08:00:00+00:00 [queued]>
+[2025-10-17T07:42:38.157+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2025-10-17T07:42:38.169+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): transform_data> on 2025-10-16 08:00:00+00:00
+[2025-10-17T07:42:38.175+0000] {standard_task_runner.py:57} INFO - Started process 91 to run task
+[2025-10-17T07:42:38.178+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'csv_etl_pipeline', 'transform_data', 'scheduled__2025-10-16T08:00:00+00:00', '--job-id', '6', '--raw', '--subdir', 'DAGS_FOLDER/etl.py', '--cfg-path', '/tmp/tmpa6g_r3b6']
+[2025-10-17T07:42:38.179+0000] {standard_task_runner.py:85} INFO - Job 6: Subtask transform_data
+[2025-10-17T07:42:38.224+0000] {task_command.py:416} INFO - Running <TaskInstance: csv_etl_pipeline.transform_data scheduled__2025-10-16T08:00:00+00:00 [running]> on host 594a58f6e02c
+[2025-10-17T07:42:38.312+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='csv_etl_pipeline' AIRFLOW_CTX_TASK_ID='transform_data' AIRFLOW_CTX_EXECUTION_DATE='2025-10-16T08:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-10-16T08:00:00+00:00'
+[2025-10-17T07:42:38.332+0000] {python.py:194} INFO - Done. Returned value was: {"id":{"0":1,"1":2,"2":3},"prix":{"0":6.65,"1":12.99,"2":28.59},"logdate":{"0":"2025-10-17T07:42:34.510531","1":"2025-10-17T07:42:34.510531","2":"2025-10-17T07:42:34.510531"}}
+[2025-10-17T07:42:38.362+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=csv_etl_pipeline, task_id=transform_data, execution_date=20251016T080000, start_date=20251017T074238, end_date=20251017T074238
+[2025-10-17T07:42:38.430+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-10-17T07:42:38.452+0000] {taskinstance.py:2778} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-10-17T07:44:41.936+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: csv_etl_pipeline.transform_data scheduled__2025-10-16T08:00:00+00:00 [queued]>
+[2025-10-17T07:44:41.944+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: csv_etl_pipeline.transform_data scheduled__2025-10-16T08:00:00+00:00 [queued]>
+[2025-10-17T07:44:41.945+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2025-10-17T07:44:41.954+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): transform_data> on 2025-10-16 08:00:00+00:00
+[2025-10-17T07:44:41.959+0000] {standard_task_runner.py:57} INFO - Started process 91 to run task
+[2025-10-17T07:44:41.963+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'csv_etl_pipeline', 'transform_data', 'scheduled__2025-10-16T08:00:00+00:00', '--job-id', '7', '--raw', '--subdir', 'DAGS_FOLDER/etl.py', '--cfg-path', '/tmp/tmp0rm7g_pa']
+[2025-10-17T07:44:41.964+0000] {standard_task_runner.py:85} INFO - Job 7: Subtask transform_data
+[2025-10-17T07:44:42.005+0000] {task_command.py:416} INFO - Running <TaskInstance: csv_etl_pipeline.transform_data scheduled__2025-10-16T08:00:00+00:00 [running]> on host 2c9472be3d90
+[2025-10-17T07:44:42.065+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='csv_etl_pipeline' AIRFLOW_CTX_TASK_ID='transform_data' AIRFLOW_CTX_EXECUTION_DATE='2025-10-16T08:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-10-16T08:00:00+00:00'
+[2025-10-17T07:44:42.083+0000] {python.py:194} INFO - Done. Returned value was: {"id":{"0":1,"1":2,"2":3},"prix":{"0":6.65,"1":12.99,"2":28.59},"logdate":{"0":"2025-10-17T07:44:38.179348","1":"2025-10-17T07:44:38.179348","2":"2025-10-17T07:44:38.179348"}}
+[2025-10-17T07:44:42.105+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=csv_etl_pipeline, task_id=transform_data, execution_date=20251016T080000, start_date=20251017T074441, end_date=20251017T074442
+[2025-10-17T07:44:42.135+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-10-17T07:44:42.158+0000] {taskinstance.py:2778} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-10-17T07:46:30.521+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: csv_etl_pipeline.transform_data scheduled__2025-10-16T08:00:00+00:00 [queued]>
+[2025-10-17T07:46:30.528+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: csv_etl_pipeline.transform_data scheduled__2025-10-16T08:00:00+00:00 [queued]>
+[2025-10-17T07:46:30.528+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2025-10-17T07:46:30.536+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): transform_data> on 2025-10-16 08:00:00+00:00
+[2025-10-17T07:46:30.542+0000] {standard_task_runner.py:57} INFO - Started process 91 to run task
+[2025-10-17T07:46:30.546+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'csv_etl_pipeline', 'transform_data', 'scheduled__2025-10-16T08:00:00+00:00', '--job-id', '6', '--raw', '--subdir', 'DAGS_FOLDER/etl.py', '--cfg-path', '/tmp/tmp9t_4mh9d']
+[2025-10-17T07:46:30.547+0000] {standard_task_runner.py:85} INFO - Job 6: Subtask transform_data
+[2025-10-17T07:46:30.588+0000] {task_command.py:416} INFO - Running <TaskInstance: csv_etl_pipeline.transform_data scheduled__2025-10-16T08:00:00+00:00 [running]> on host f3df47fa4574
+[2025-10-17T07:46:30.649+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='csv_etl_pipeline' AIRFLOW_CTX_TASK_ID='transform_data' AIRFLOW_CTX_EXECUTION_DATE='2025-10-16T08:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-10-16T08:00:00+00:00'
+[2025-10-17T07:46:30.668+0000] {python.py:194} INFO - Done. Returned value was: {"id":{"0":1,"1":2,"2":3},"prix":{"0":6.65,"1":12.99,"2":28.59},"logdate":{"0":"2025-10-17T07:46:26.490606","1":"2025-10-17T07:46:26.490606","2":"2025-10-17T07:46:26.490606"}}
+[2025-10-17T07:46:30.687+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=csv_etl_pipeline, task_id=transform_data, execution_date=20251016T080000, start_date=20251017T074630, end_date=20251017T074630
+[2025-10-17T07:46:30.717+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-10-17T07:46:30.738+0000] {taskinstance.py:2778} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-10-17T07:53:28.584+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: csv_etl_pipeline.transform_data scheduled__2025-10-16T08:00:00+00:00 [queued]>
+[2025-10-17T07:53:28.593+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: csv_etl_pipeline.transform_data scheduled__2025-10-16T08:00:00+00:00 [queued]>
+[2025-10-17T07:53:28.594+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2025-10-17T07:53:28.604+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): transform_data> on 2025-10-16 08:00:00+00:00
+[2025-10-17T07:53:28.610+0000] {standard_task_runner.py:57} INFO - Started process 99 to run task
+[2025-10-17T07:53:28.614+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'csv_etl_pipeline', 'transform_data', 'scheduled__2025-10-16T08:00:00+00:00', '--job-id', '6', '--raw', '--subdir', 'DAGS_FOLDER/etl.py', '--cfg-path', '/tmp/tmpj145bz93']
+[2025-10-17T07:53:28.618+0000] {standard_task_runner.py:85} INFO - Job 6: Subtask transform_data
+[2025-10-17T07:53:28.668+0000] {task_command.py:416} INFO - Running <TaskInstance: csv_etl_pipeline.transform_data scheduled__2025-10-16T08:00:00+00:00 [running]> on host b75e03269a58
+[2025-10-17T07:53:28.745+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='csv_etl_pipeline' AIRFLOW_CTX_TASK_ID='transform_data' AIRFLOW_CTX_EXECUTION_DATE='2025-10-16T08:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-10-16T08:00:00+00:00'
+[2025-10-17T07:53:28.767+0000] {python.py:194} INFO - Done. Returned value was: {"id":{"0":1,"1":2,"2":3},"prix":{"0":6.65,"1":12.99,"2":28.59},"logdate":{"0":"2025-10-17T07:53:24.538921","1":"2025-10-17T07:53:24.538921","2":"2025-10-17T07:53:24.538921"}}
+[2025-10-17T07:53:28.788+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=csv_etl_pipeline, task_id=transform_data, execution_date=20251016T080000, start_date=20251017T075328, end_date=20251017T075328
+[2025-10-17T07:53:28.826+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-10-17T07:53:28.848+0000] {taskinstance.py:2778} INFO - 1 downstream tasks scheduled from follow-on schedule check

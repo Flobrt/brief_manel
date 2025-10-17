@@ -1,4 +1,3 @@
-import os
 import requests
 from io import StringIO
 from bs4 import BeautifulSoup
@@ -7,11 +6,18 @@ from datetime import datetime
 from airflow import DAG
 from airflow.operators.python_operator import PythonOperator
 from airflow.operators.bash import BashOperator
+from airflow.providers.postgres.hooks.postgres import PostgresHook
 # from .functions import get_games, load_to_db
 
 import psycopg2
 import pandas as pd
 
+def get_data():
+    pg_hook = PostgresHook(postgres_conn_id='postgres_pg')
+    conn = pg_hook.get_conn()
+    # cursor = conn.cursor()
+    df = pd.read_sql("SELECT * FROM games", conn)
+    print(f"Nombre de jeux : {df.shape[0]}")
 # Connexion à PostgreSQL
 def get_connection():
     return psycopg2.connect(
@@ -178,8 +184,6 @@ def load_data(**kwargs):
     load_to_db(df)
 
 
-
-
 # Définition du DAG
 dag = DAG(
     'csv_etl_pipeline',
@@ -193,11 +197,12 @@ dag = DAG(
 
 
 # check_year      = PythonOperator(task_id='check_even_year', python_callable=skip_if_not_even_year, provide_context=True, dag=dag)
+get_data      = PythonOperator(task_id='get_data', python_callable=get_data, dag=dag)
 init_pipline    = PythonOperator(task_id='init_pipline', python_callable=init_pipline, dag=dag)
 request_api     = PythonOperator(task_id='request_api', python_callable=request_api, provide_context=True, dag=dag)
 transform_data  = PythonOperator(task_id='transform_data', python_callable=transform_data, provide_context=True, dag=dag)
 load_data       = PythonOperator(task_id='load_data', python_callable=load_data, provide_context=True, dag=dag)
-soda_scan       = BashOperator(
+soda_scan_1      = BashOperator(
                     task_id='soda_scan',
                     bash_command=(
                         "soda scan -d airflow_pg -c /opt/airflow/dags/soda/configuration.yml "
@@ -205,7 +210,15 @@ soda_scan       = BashOperator(
                     ),
                     dag=dag
                 )
+soda_scan_2       = BashOperator(
+                    task_id='soda_scan_2',
+                    bash_command=(
+                        "soda scan -d airflow_pg -c /opt/airflow/dags/soda/configuration.yml "
+                        "/opt/airflow/dags/soda/checks_2.yml"
+                    ),
+                    dag=dag
+                )
 
 # Définition de l'ordre des tâches
-init_pipline >> request_api  >> transform_data >> soda_scan >> load_data
+get_data >> init_pipline >> request_api  >> soda_scan_1 >> transform_data  >> load_data >> soda_scan_2
 

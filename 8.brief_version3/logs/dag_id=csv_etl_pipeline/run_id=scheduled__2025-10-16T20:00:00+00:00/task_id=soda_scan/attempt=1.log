@@ -1,0 +1,348 @@
+[2025-10-17T08:09:02.200+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: csv_etl_pipeline.soda_scan scheduled__2025-10-16T20:00:00+00:00 [queued]>
+[2025-10-17T08:09:02.211+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: csv_etl_pipeline.soda_scan scheduled__2025-10-16T20:00:00+00:00 [queued]>
+[2025-10-17T08:09:02.211+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2025-10-17T08:09:02.224+0000] {taskinstance.py:1382} INFO - Executing <Task(BashOperator): soda_scan> on 2025-10-16 20:00:00+00:00
+[2025-10-17T08:09:02.235+0000] {standard_task_runner.py:57} INFO - Started process 80 to run task
+[2025-10-17T08:09:02.241+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'csv_etl_pipeline', 'soda_scan', 'scheduled__2025-10-16T20:00:00+00:00', '--job-id', '5', '--raw', '--subdir', 'DAGS_FOLDER/etl.py', '--cfg-path', '/tmp/tmpcuw58cyu']
+[2025-10-17T08:09:02.242+0000] {standard_task_runner.py:85} INFO - Job 5: Subtask soda_scan
+[2025-10-17T08:09:02.344+0000] {task_command.py:416} INFO - Running <TaskInstance: csv_etl_pipeline.soda_scan scheduled__2025-10-16T20:00:00+00:00 [running]> on host b7bfdf78a159
+[2025-10-17T08:09:02.429+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='csv_etl_pipeline' AIRFLOW_CTX_TASK_ID='soda_scan' AIRFLOW_CTX_EXECUTION_DATE='2025-10-16T20:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-10-16T20:00:00+00:00'
+[2025-10-17T08:09:02.433+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-10-17T08:09:02.434+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'soda scan -d ***_pg -c /opt/***/dags/soda/configuration.yml /opt/***/dags/soda/checks.yml']
+[2025-10-17T08:09:02.449+0000] {subprocess.py:86} INFO - Output:
+[2025-10-17T08:09:03.542+0000] {subprocess.py:93} INFO - [08:09:03] Soda Core 3.5.6
+[2025-10-17T08:09:03.628+0000] {subprocess.py:93} INFO - [08:09:03] Counting invalid without valid or invalid specification does not make sense. ("invalid_count(price) = 0" @ line=9,col=5 in /opt/***/dags/soda/checks.yml)
+[2025-10-17T08:09:03.630+0000] {subprocess.py:93} INFO - [08:09:03] Scan summary:
+[2025-10-17T08:09:03.631+0000] {subprocess.py:93} INFO - [08:09:03] 6/6 checks PASSED:
+[2025-10-17T08:09:03.631+0000] {subprocess.py:93} INFO - [08:09:03]     games in ***_pg
+[2025-10-17T08:09:03.631+0000] {subprocess.py:93} INFO - [08:09:03]       row_count > 0 [PASSED]
+[2025-10-17T08:09:03.631+0000] {subprocess.py:93} INFO - [08:09:03]       missing_count(game) = 0 [PASSED]
+[2025-10-17T08:09:03.631+0000] {subprocess.py:93} INFO - [08:09:03]       duplicate_count(urlgame) = 0 [PASSED]
+[2025-10-17T08:09:03.631+0000] {subprocess.py:93} INFO - [08:09:03]     prices in ***_pg
+[2025-10-17T08:09:03.631+0000] {subprocess.py:93} INFO - [08:09:03]       row_count = 0 [PASSED]
+[2025-10-17T08:09:03.631+0000] {subprocess.py:93} INFO - [08:09:03]       missing_count(price) = 0 [PASSED]
+[2025-10-17T08:09:03.631+0000] {subprocess.py:93} INFO - [08:09:03]       invalid_count(price) = 0 [PASSED]
+[2025-10-17T08:09:03.631+0000] {subprocess.py:93} INFO - [08:09:03] All is good. No failures. No warnings. No errors.
+[2025-10-17T08:09:03.850+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-10-17T08:09:03.872+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=csv_etl_pipeline, task_id=soda_scan, execution_date=20251016T200000, start_date=20251017T080902, end_date=20251017T080903
+[2025-10-17T08:09:03.899+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-10-17T08:09:03.920+0000] {taskinstance.py:2778} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-10-17T08:12:43.733+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: csv_etl_pipeline.soda_scan scheduled__2025-10-16T20:00:00+00:00 [queued]>
+[2025-10-17T08:12:43.741+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: csv_etl_pipeline.soda_scan scheduled__2025-10-16T20:00:00+00:00 [queued]>
+[2025-10-17T08:12:43.741+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2025-10-17T08:12:43.752+0000] {taskinstance.py:1382} INFO - Executing <Task(BashOperator): soda_scan> on 2025-10-16 20:00:00+00:00
+[2025-10-17T08:12:43.759+0000] {standard_task_runner.py:57} INFO - Started process 88 to run task
+[2025-10-17T08:12:43.764+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'csv_etl_pipeline', 'soda_scan', 'scheduled__2025-10-16T20:00:00+00:00', '--job-id', '5', '--raw', '--subdir', 'DAGS_FOLDER/etl.py', '--cfg-path', '/tmp/tmpkboeyijo']
+[2025-10-17T08:12:43.766+0000] {standard_task_runner.py:85} INFO - Job 5: Subtask soda_scan
+[2025-10-17T08:12:43.826+0000] {task_command.py:416} INFO - Running <TaskInstance: csv_etl_pipeline.soda_scan scheduled__2025-10-16T20:00:00+00:00 [running]> on host 532d771fe9a3
+[2025-10-17T08:12:43.921+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='csv_etl_pipeline' AIRFLOW_CTX_TASK_ID='soda_scan' AIRFLOW_CTX_EXECUTION_DATE='2025-10-16T20:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-10-16T20:00:00+00:00'
+[2025-10-17T08:12:43.924+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-10-17T08:12:43.925+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'soda scan -d ***_pg -c /opt/***/dags/soda/configuration.yml /opt/***/dags/soda/checks.yml']
+[2025-10-17T08:12:43.940+0000] {subprocess.py:86} INFO - Output:
+[2025-10-17T08:12:45.033+0000] {subprocess.py:93} INFO - [08:12:45] Soda Core 3.5.6
+[2025-10-17T08:12:45.110+0000] {subprocess.py:93} INFO - [08:12:45] Counting invalid without valid or invalid specification does not make sense. ("invalid_count(price) = 0" @ line=9,col=5 in /opt/***/dags/soda/checks.yml)
+[2025-10-17T08:12:45.113+0000] {subprocess.py:93} INFO - [08:12:45] Scan summary:
+[2025-10-17T08:12:45.113+0000] {subprocess.py:93} INFO - [08:12:45] 6/6 checks PASSED:
+[2025-10-17T08:12:45.113+0000] {subprocess.py:93} INFO - [08:12:45]     games in ***_pg
+[2025-10-17T08:12:45.114+0000] {subprocess.py:93} INFO - [08:12:45]       row_count > 0 [PASSED]
+[2025-10-17T08:12:45.114+0000] {subprocess.py:93} INFO - [08:12:45]       missing_count(game) = 0 [PASSED]
+[2025-10-17T08:12:45.114+0000] {subprocess.py:93} INFO - [08:12:45]       duplicate_count(urlgame) = 0 [PASSED]
+[2025-10-17T08:12:45.114+0000] {subprocess.py:93} INFO - [08:12:45]     prices in ***_pg
+[2025-10-17T08:12:45.114+0000] {subprocess.py:93} INFO - [08:12:45]       row_count = 0 [PASSED]
+[2025-10-17T08:12:45.114+0000] {subprocess.py:93} INFO - [08:12:45]       missing_count(price) = 0 [PASSED]
+[2025-10-17T08:12:45.114+0000] {subprocess.py:93} INFO - [08:12:45]       invalid_count(price) = 0 [PASSED]
+[2025-10-17T08:12:45.114+0000] {subprocess.py:93} INFO - [08:12:45] All is good. No failures. No warnings. No errors.
+[2025-10-17T08:12:45.346+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-10-17T08:12:45.370+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=csv_etl_pipeline, task_id=soda_scan, execution_date=20251016T200000, start_date=20251017T081243, end_date=20251017T081245
+[2025-10-17T08:12:45.422+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-10-17T08:12:45.443+0000] {taskinstance.py:2778} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-10-17T08:14:56.582+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: csv_etl_pipeline.soda_scan scheduled__2025-10-16T20:00:00+00:00 [queued]>
+[2025-10-17T08:14:56.592+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: csv_etl_pipeline.soda_scan scheduled__2025-10-16T20:00:00+00:00 [queued]>
+[2025-10-17T08:14:56.592+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2025-10-17T08:14:56.602+0000] {taskinstance.py:1382} INFO - Executing <Task(BashOperator): soda_scan> on 2025-10-16 20:00:00+00:00
+[2025-10-17T08:14:56.610+0000] {standard_task_runner.py:57} INFO - Started process 87 to run task
+[2025-10-17T08:14:56.614+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'csv_etl_pipeline', 'soda_scan', 'scheduled__2025-10-16T20:00:00+00:00', '--job-id', '5', '--raw', '--subdir', 'DAGS_FOLDER/etl.py', '--cfg-path', '/tmp/tmpjexzdo2h']
+[2025-10-17T08:14:56.619+0000] {standard_task_runner.py:85} INFO - Job 5: Subtask soda_scan
+[2025-10-17T08:14:56.669+0000] {task_command.py:416} INFO - Running <TaskInstance: csv_etl_pipeline.soda_scan scheduled__2025-10-16T20:00:00+00:00 [running]> on host e82aa66f271e
+[2025-10-17T08:14:56.733+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='csv_etl_pipeline' AIRFLOW_CTX_TASK_ID='soda_scan' AIRFLOW_CTX_EXECUTION_DATE='2025-10-16T20:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-10-16T20:00:00+00:00'
+[2025-10-17T08:14:56.734+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-10-17T08:14:56.735+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'soda scan -d ***_pg -c /opt/***/dags/soda/configuration.yml /opt/***/dags/soda/checks.yml']
+[2025-10-17T08:14:56.750+0000] {subprocess.py:86} INFO - Output:
+[2025-10-17T08:14:58.054+0000] {subprocess.py:93} INFO - [08:14:58] Soda Core 3.5.6
+[2025-10-17T08:14:58.136+0000] {subprocess.py:93} INFO - [08:14:58] Counting invalid without valid or invalid specification does not make sense. ("invalid_count(price) = 0" @ line=9,col=5 in /opt/***/dags/soda/checks.yml)
+[2025-10-17T08:14:58.139+0000] {subprocess.py:93} INFO - [08:14:58] Scan summary:
+[2025-10-17T08:14:58.139+0000] {subprocess.py:93} INFO - [08:14:58] 6/6 checks PASSED:
+[2025-10-17T08:14:58.139+0000] {subprocess.py:93} INFO - [08:14:58]     games in ***_pg
+[2025-10-17T08:14:58.140+0000] {subprocess.py:93} INFO - [08:14:58]       row_count > 0 [PASSED]
+[2025-10-17T08:14:58.140+0000] {subprocess.py:93} INFO - [08:14:58]       missing_count(game) = 0 [PASSED]
+[2025-10-17T08:14:58.140+0000] {subprocess.py:93} INFO - [08:14:58]       duplicate_count(urlgame) = 0 [PASSED]
+[2025-10-17T08:14:58.140+0000] {subprocess.py:93} INFO - [08:14:58]     prices in ***_pg
+[2025-10-17T08:14:58.140+0000] {subprocess.py:93} INFO - [08:14:58]       row_count = 0 [PASSED]
+[2025-10-17T08:14:58.140+0000] {subprocess.py:93} INFO - [08:14:58]       missing_count(price) = 0 [PASSED]
+[2025-10-17T08:14:58.140+0000] {subprocess.py:93} INFO - [08:14:58]       invalid_count(price) = 0 [PASSED]
+[2025-10-17T08:14:58.140+0000] {subprocess.py:93} INFO - [08:14:58] All is good. No failures. No warnings. No errors.
+[2025-10-17T08:14:58.391+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-10-17T08:14:58.419+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=csv_etl_pipeline, task_id=soda_scan, execution_date=20251016T200000, start_date=20251017T081456, end_date=20251017T081458
+[2025-10-17T08:14:58.473+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-10-17T08:14:58.498+0000] {taskinstance.py:2778} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-10-17T08:28:22.060+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: csv_etl_pipeline.soda_scan scheduled__2025-10-16T20:00:00+00:00 [queued]>
+[2025-10-17T08:28:22.070+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: csv_etl_pipeline.soda_scan scheduled__2025-10-16T20:00:00+00:00 [queued]>
+[2025-10-17T08:28:22.070+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2025-10-17T08:28:22.089+0000] {taskinstance.py:1382} INFO - Executing <Task(BashOperator): soda_scan> on 2025-10-16 20:00:00+00:00
+[2025-10-17T08:28:22.095+0000] {standard_task_runner.py:57} INFO - Started process 80 to run task
+[2025-10-17T08:28:22.098+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'csv_etl_pipeline', 'soda_scan', 'scheduled__2025-10-16T20:00:00+00:00', '--job-id', '5', '--raw', '--subdir', 'DAGS_FOLDER/etl.py', '--cfg-path', '/tmp/tmpgyhsc009']
+[2025-10-17T08:28:22.101+0000] {standard_task_runner.py:85} INFO - Job 5: Subtask soda_scan
+[2025-10-17T08:28:22.147+0000] {task_command.py:416} INFO - Running <TaskInstance: csv_etl_pipeline.soda_scan scheduled__2025-10-16T20:00:00+00:00 [running]> on host 0912e2f8d1fc
+[2025-10-17T08:28:22.230+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='csv_etl_pipeline' AIRFLOW_CTX_TASK_ID='soda_scan' AIRFLOW_CTX_EXECUTION_DATE='2025-10-16T20:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-10-16T20:00:00+00:00'
+[2025-10-17T08:28:22.231+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-10-17T08:28:22.232+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'soda scan -d ***_pg -c /opt/***/dags/soda/configuration.yml /opt/***/dags/soda/checks.yml']
+[2025-10-17T08:28:22.243+0000] {subprocess.py:86} INFO - Output:
+[2025-10-17T08:28:23.171+0000] {subprocess.py:93} INFO - [08:28:23] Soda Core 3.5.6
+[2025-10-17T08:28:23.249+0000] {subprocess.py:93} INFO - [08:28:23] Counting invalid without valid or invalid specification does not make sense. ("invalid_count(price) = 0" @ line=9,col=5 in /opt/***/dags/soda/checks.yml)
+[2025-10-17T08:28:23.252+0000] {subprocess.py:93} INFO - [08:28:23] Scan summary:
+[2025-10-17T08:28:23.252+0000] {subprocess.py:93} INFO - [08:28:23] 6/6 checks PASSED:
+[2025-10-17T08:28:23.252+0000] {subprocess.py:93} INFO - [08:28:23]     games in ***_pg
+[2025-10-17T08:28:23.252+0000] {subprocess.py:93} INFO - [08:28:23]       row_count > 0 [PASSED]
+[2025-10-17T08:28:23.252+0000] {subprocess.py:93} INFO - [08:28:23]       missing_count(game) = 0 [PASSED]
+[2025-10-17T08:28:23.252+0000] {subprocess.py:93} INFO - [08:28:23]       duplicate_count(urlgame) = 0 [PASSED]
+[2025-10-17T08:28:23.253+0000] {subprocess.py:93} INFO - [08:28:23]     prices in ***_pg
+[2025-10-17T08:28:23.253+0000] {subprocess.py:93} INFO - [08:28:23]       row_count = 0 [PASSED]
+[2025-10-17T08:28:23.253+0000] {subprocess.py:93} INFO - [08:28:23]       missing_count(price) = 0 [PASSED]
+[2025-10-17T08:28:23.253+0000] {subprocess.py:93} INFO - [08:28:23]       invalid_count(price) = 0 [PASSED]
+[2025-10-17T08:28:23.253+0000] {subprocess.py:93} INFO - [08:28:23] All is good. No failures. No warnings. No errors.
+[2025-10-17T08:28:23.462+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-10-17T08:28:23.484+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=csv_etl_pipeline, task_id=soda_scan, execution_date=20251016T200000, start_date=20251017T082822, end_date=20251017T082823
+[2025-10-17T08:28:23.515+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-10-17T08:28:23.534+0000] {taskinstance.py:2778} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-10-17T08:41:52.988+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: csv_etl_pipeline.soda_scan scheduled__2025-10-16T20:00:00+00:00 [queued]>
+[2025-10-17T08:41:52.997+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: csv_etl_pipeline.soda_scan scheduled__2025-10-16T20:00:00+00:00 [queued]>
+[2025-10-17T08:41:52.997+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2025-10-17T08:41:53.009+0000] {taskinstance.py:1382} INFO - Executing <Task(BashOperator): soda_scan> on 2025-10-16 20:00:00+00:00
+[2025-10-17T08:41:53.015+0000] {standard_task_runner.py:57} INFO - Started process 88 to run task
+[2025-10-17T08:41:53.019+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'csv_etl_pipeline', 'soda_scan', 'scheduled__2025-10-16T20:00:00+00:00', '--job-id', '5', '--raw', '--subdir', 'DAGS_FOLDER/etl.py', '--cfg-path', '/tmp/tmp7uvhg7ic']
+[2025-10-17T08:41:53.022+0000] {standard_task_runner.py:85} INFO - Job 5: Subtask soda_scan
+[2025-10-17T08:41:53.066+0000] {task_command.py:416} INFO - Running <TaskInstance: csv_etl_pipeline.soda_scan scheduled__2025-10-16T20:00:00+00:00 [running]> on host c22c7f7cd908
+[2025-10-17T08:41:53.131+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='csv_etl_pipeline' AIRFLOW_CTX_TASK_ID='soda_scan' AIRFLOW_CTX_EXECUTION_DATE='2025-10-16T20:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-10-16T20:00:00+00:00'
+[2025-10-17T08:41:53.133+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-10-17T08:41:53.134+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'soda scan -d ***_pg -c /opt/***/dags/soda/configuration.yml /opt/***/dags/soda/checks.yml']
+[2025-10-17T08:41:53.145+0000] {subprocess.py:86} INFO - Output:
+[2025-10-17T08:41:54.334+0000] {subprocess.py:93} INFO - [08:41:54] Soda Core 3.5.6
+[2025-10-17T08:41:54.417+0000] {subprocess.py:93} INFO - [08:41:54] Counting invalid without valid or invalid specification does not make sense. ("invalid_count(price) = 0" @ line=9,col=5 in /opt/***/dags/soda/checks.yml)
+[2025-10-17T08:41:54.420+0000] {subprocess.py:93} INFO - [08:41:54] Scan summary:
+[2025-10-17T08:41:54.420+0000] {subprocess.py:93} INFO - [08:41:54] 6/6 checks PASSED:
+[2025-10-17T08:41:54.420+0000] {subprocess.py:93} INFO - [08:41:54]     games in ***_pg
+[2025-10-17T08:41:54.420+0000] {subprocess.py:93} INFO - [08:41:54]       row_count > 0 [PASSED]
+[2025-10-17T08:41:54.420+0000] {subprocess.py:93} INFO - [08:41:54]       missing_count(game) = 0 [PASSED]
+[2025-10-17T08:41:54.420+0000] {subprocess.py:93} INFO - [08:41:54]       duplicate_count(urlgame) = 0 [PASSED]
+[2025-10-17T08:41:54.420+0000] {subprocess.py:93} INFO - [08:41:54]     prices in ***_pg
+[2025-10-17T08:41:54.421+0000] {subprocess.py:93} INFO - [08:41:54]       row_count = 0 [PASSED]
+[2025-10-17T08:41:54.421+0000] {subprocess.py:93} INFO - [08:41:54]       missing_count(price) = 0 [PASSED]
+[2025-10-17T08:41:54.421+0000] {subprocess.py:93} INFO - [08:41:54]       invalid_count(price) = 0 [PASSED]
+[2025-10-17T08:41:54.421+0000] {subprocess.py:93} INFO - [08:41:54] All is good. No failures. No warnings. No errors.
+[2025-10-17T08:41:54.741+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-10-17T08:41:54.772+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=csv_etl_pipeline, task_id=soda_scan, execution_date=20251016T200000, start_date=20251017T084152, end_date=20251017T084154
+[2025-10-17T08:41:54.796+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-10-17T08:41:54.821+0000] {taskinstance.py:2778} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-10-17T08:44:08.714+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: csv_etl_pipeline.soda_scan scheduled__2025-10-16T20:00:00+00:00 [queued]>
+[2025-10-17T08:44:08.724+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: csv_etl_pipeline.soda_scan scheduled__2025-10-16T20:00:00+00:00 [queued]>
+[2025-10-17T08:44:08.724+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2025-10-17T08:44:08.736+0000] {taskinstance.py:1382} INFO - Executing <Task(BashOperator): soda_scan> on 2025-10-16 20:00:00+00:00
+[2025-10-17T08:44:08.745+0000] {standard_task_runner.py:57} INFO - Started process 88 to run task
+[2025-10-17T08:44:08.749+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'csv_etl_pipeline', 'soda_scan', 'scheduled__2025-10-16T20:00:00+00:00', '--job-id', '5', '--raw', '--subdir', 'DAGS_FOLDER/etl.py', '--cfg-path', '/tmp/tmplfxffvnj']
+[2025-10-17T08:44:08.752+0000] {standard_task_runner.py:85} INFO - Job 5: Subtask soda_scan
+[2025-10-17T08:44:08.800+0000] {task_command.py:416} INFO - Running <TaskInstance: csv_etl_pipeline.soda_scan scheduled__2025-10-16T20:00:00+00:00 [running]> on host 41c1f4dd29f1
+[2025-10-17T08:44:08.865+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='csv_etl_pipeline' AIRFLOW_CTX_TASK_ID='soda_scan' AIRFLOW_CTX_EXECUTION_DATE='2025-10-16T20:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-10-16T20:00:00+00:00'
+[2025-10-17T08:44:08.867+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-10-17T08:44:08.868+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'soda scan -d ***_pg -c /opt/***/dags/soda/configuration.yml /opt/***/dags/soda/checks.yml']
+[2025-10-17T08:44:08.882+0000] {subprocess.py:86} INFO - Output:
+[2025-10-17T08:44:09.979+0000] {subprocess.py:93} INFO - [08:44:09] Soda Core 3.5.6
+[2025-10-17T08:44:10.053+0000] {subprocess.py:93} INFO - [08:44:10] Counting invalid without valid or invalid specification does not make sense. ("invalid_count(price) = 0" @ line=9,col=5 in /opt/***/dags/soda/checks.yml)
+[2025-10-17T08:44:10.056+0000] {subprocess.py:93} INFO - [08:44:10] Scan summary:
+[2025-10-17T08:44:10.056+0000] {subprocess.py:93} INFO - [08:44:10] 6/6 checks PASSED:
+[2025-10-17T08:44:10.056+0000] {subprocess.py:93} INFO - [08:44:10]     games in ***_pg
+[2025-10-17T08:44:10.056+0000] {subprocess.py:93} INFO - [08:44:10]       row_count > 0 [PASSED]
+[2025-10-17T08:44:10.056+0000] {subprocess.py:93} INFO - [08:44:10]       missing_count(game) = 0 [PASSED]
+[2025-10-17T08:44:10.056+0000] {subprocess.py:93} INFO - [08:44:10]       duplicate_count(urlgame) = 0 [PASSED]
+[2025-10-17T08:44:10.057+0000] {subprocess.py:93} INFO - [08:44:10]     prices in ***_pg
+[2025-10-17T08:44:10.057+0000] {subprocess.py:93} INFO - [08:44:10]       row_count = 0 [PASSED]
+[2025-10-17T08:44:10.057+0000] {subprocess.py:93} INFO - [08:44:10]       missing_count(price) = 0 [PASSED]
+[2025-10-17T08:44:10.057+0000] {subprocess.py:93} INFO - [08:44:10]       invalid_count(price) = 0 [PASSED]
+[2025-10-17T08:44:10.057+0000] {subprocess.py:93} INFO - [08:44:10] All is good. No failures. No warnings. No errors.
+[2025-10-17T08:44:10.295+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-10-17T08:44:10.317+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=csv_etl_pipeline, task_id=soda_scan, execution_date=20251016T200000, start_date=20251017T084408, end_date=20251017T084410
+[2025-10-17T08:44:10.366+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-10-17T08:44:10.388+0000] {taskinstance.py:2778} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-10-17T08:45:25.337+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: csv_etl_pipeline.soda_scan scheduled__2025-10-16T20:00:00+00:00 [queued]>
+[2025-10-17T08:45:25.345+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: csv_etl_pipeline.soda_scan scheduled__2025-10-16T20:00:00+00:00 [queued]>
+[2025-10-17T08:45:25.346+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2025-10-17T08:45:25.357+0000] {taskinstance.py:1382} INFO - Executing <Task(BashOperator): soda_scan> on 2025-10-16 20:00:00+00:00
+[2025-10-17T08:45:25.364+0000] {standard_task_runner.py:57} INFO - Started process 87 to run task
+[2025-10-17T08:45:25.368+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'csv_etl_pipeline', 'soda_scan', 'scheduled__2025-10-16T20:00:00+00:00', '--job-id', '5', '--raw', '--subdir', 'DAGS_FOLDER/etl.py', '--cfg-path', '/tmp/tmpnppuco3g']
+[2025-10-17T08:45:25.373+0000] {standard_task_runner.py:85} INFO - Job 5: Subtask soda_scan
+[2025-10-17T08:45:25.426+0000] {task_command.py:416} INFO - Running <TaskInstance: csv_etl_pipeline.soda_scan scheduled__2025-10-16T20:00:00+00:00 [running]> on host e6d798efe4b0
+[2025-10-17T08:45:25.523+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='csv_etl_pipeline' AIRFLOW_CTX_TASK_ID='soda_scan' AIRFLOW_CTX_EXECUTION_DATE='2025-10-16T20:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-10-16T20:00:00+00:00'
+[2025-10-17T08:45:25.524+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-10-17T08:45:25.525+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'soda scan -d ***_pg -c /opt/***/dags/soda/configuration.yml /opt/***/dags/soda/checks.yml']
+[2025-10-17T08:45:25.538+0000] {subprocess.py:86} INFO - Output:
+[2025-10-17T08:45:26.652+0000] {subprocess.py:93} INFO - [08:45:26] Soda Core 3.5.6
+[2025-10-17T08:45:26.733+0000] {subprocess.py:93} INFO - [08:45:26] Counting invalid without valid or invalid specification does not make sense. ("invalid_count(price) = 0" @ line=9,col=5 in /opt/***/dags/soda/checks.yml)
+[2025-10-17T08:45:26.737+0000] {subprocess.py:93} INFO - [08:45:26] Scan summary:
+[2025-10-17T08:45:26.737+0000] {subprocess.py:93} INFO - [08:45:26] 6/6 checks PASSED:
+[2025-10-17T08:45:26.737+0000] {subprocess.py:93} INFO - [08:45:26]     games in ***_pg
+[2025-10-17T08:45:26.737+0000] {subprocess.py:93} INFO - [08:45:26]       row_count > 0 [PASSED]
+[2025-10-17T08:45:26.737+0000] {subprocess.py:93} INFO - [08:45:26]       missing_count(game) = 0 [PASSED]
+[2025-10-17T08:45:26.737+0000] {subprocess.py:93} INFO - [08:45:26]       duplicate_count(urlgame) = 0 [PASSED]
+[2025-10-17T08:45:26.737+0000] {subprocess.py:93} INFO - [08:45:26]     prices in ***_pg
+[2025-10-17T08:45:26.737+0000] {subprocess.py:93} INFO - [08:45:26]       row_count = 0 [PASSED]
+[2025-10-17T08:45:26.737+0000] {subprocess.py:93} INFO - [08:45:26]       missing_count(price) = 0 [PASSED]
+[2025-10-17T08:45:26.738+0000] {subprocess.py:93} INFO - [08:45:26]       invalid_count(price) = 0 [PASSED]
+[2025-10-17T08:45:26.738+0000] {subprocess.py:93} INFO - [08:45:26] All is good. No failures. No warnings. No errors.
+[2025-10-17T08:45:27.028+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-10-17T08:45:27.057+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=csv_etl_pipeline, task_id=soda_scan, execution_date=20251016T200000, start_date=20251017T084525, end_date=20251017T084527
+[2025-10-17T08:45:27.107+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-10-17T08:45:27.130+0000] {taskinstance.py:2778} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-10-17T08:47:21.557+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: csv_etl_pipeline.soda_scan scheduled__2025-10-16T20:00:00+00:00 [queued]>
+[2025-10-17T08:47:21.568+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: csv_etl_pipeline.soda_scan scheduled__2025-10-16T20:00:00+00:00 [queued]>
+[2025-10-17T08:47:21.568+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2025-10-17T08:47:21.581+0000] {taskinstance.py:1382} INFO - Executing <Task(BashOperator): soda_scan> on 2025-10-16 20:00:00+00:00
+[2025-10-17T08:47:21.589+0000] {standard_task_runner.py:57} INFO - Started process 88 to run task
+[2025-10-17T08:47:21.593+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'csv_etl_pipeline', 'soda_scan', 'scheduled__2025-10-16T20:00:00+00:00', '--job-id', '5', '--raw', '--subdir', 'DAGS_FOLDER/etl.py', '--cfg-path', '/tmp/tmpqgxyq6jq']
+[2025-10-17T08:47:21.597+0000] {standard_task_runner.py:85} INFO - Job 5: Subtask soda_scan
+[2025-10-17T08:47:21.644+0000] {task_command.py:416} INFO - Running <TaskInstance: csv_etl_pipeline.soda_scan scheduled__2025-10-16T20:00:00+00:00 [running]> on host e39668730f63
+[2025-10-17T08:47:21.710+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='csv_etl_pipeline' AIRFLOW_CTX_TASK_ID='soda_scan' AIRFLOW_CTX_EXECUTION_DATE='2025-10-16T20:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-10-16T20:00:00+00:00'
+[2025-10-17T08:47:21.711+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-10-17T08:47:21.712+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'soda scan -d ***_pg -c /opt/***/dags/soda/configuration.yml /opt/***/dags/soda/checks.yml']
+[2025-10-17T08:47:21.724+0000] {subprocess.py:86} INFO - Output:
+[2025-10-17T08:47:22.767+0000] {subprocess.py:93} INFO - [08:47:22] Soda Core 3.5.6
+[2025-10-17T08:47:22.843+0000] {subprocess.py:93} INFO - [08:47:22] Counting invalid without valid or invalid specification does not make sense. ("invalid_count(price) = 0" @ line=9,col=5 in /opt/***/dags/soda/checks.yml)
+[2025-10-17T08:47:22.845+0000] {subprocess.py:93} INFO - [08:47:22] Scan summary:
+[2025-10-17T08:47:22.845+0000] {subprocess.py:93} INFO - [08:47:22] 6/6 checks PASSED:
+[2025-10-17T08:47:22.845+0000] {subprocess.py:93} INFO - [08:47:22]     games in ***_pg
+[2025-10-17T08:47:22.846+0000] {subprocess.py:93} INFO - [08:47:22]       row_count > 0 [PASSED]
+[2025-10-17T08:47:22.846+0000] {subprocess.py:93} INFO - [08:47:22]       missing_count(game) = 0 [PASSED]
+[2025-10-17T08:47:22.846+0000] {subprocess.py:93} INFO - [08:47:22]       duplicate_count(urlgame) = 0 [PASSED]
+[2025-10-17T08:47:22.846+0000] {subprocess.py:93} INFO - [08:47:22]     prices in ***_pg
+[2025-10-17T08:47:22.846+0000] {subprocess.py:93} INFO - [08:47:22]       row_count = 0 [PASSED]
+[2025-10-17T08:47:22.846+0000] {subprocess.py:93} INFO - [08:47:22]       missing_count(price) = 0 [PASSED]
+[2025-10-17T08:47:22.846+0000] {subprocess.py:93} INFO - [08:47:22]       invalid_count(price) = 0 [PASSED]
+[2025-10-17T08:47:22.846+0000] {subprocess.py:93} INFO - [08:47:22] All is good. No failures. No warnings. No errors.
+[2025-10-17T08:47:23.584+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-10-17T08:47:23.607+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=csv_etl_pipeline, task_id=soda_scan, execution_date=20251016T200000, start_date=20251017T084721, end_date=20251017T084723
+[2025-10-17T08:47:23.652+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-10-17T08:47:23.671+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-10-17T08:51:33.824+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: csv_etl_pipeline.soda_scan scheduled__2025-10-16T20:00:00+00:00 [queued]>
+[2025-10-17T08:51:33.834+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: csv_etl_pipeline.soda_scan scheduled__2025-10-16T20:00:00+00:00 [queued]>
+[2025-10-17T08:51:33.834+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2025-10-17T08:51:33.848+0000] {taskinstance.py:1382} INFO - Executing <Task(BashOperator): soda_scan> on 2025-10-16 20:00:00+00:00
+[2025-10-17T08:51:33.855+0000] {standard_task_runner.py:57} INFO - Started process 87 to run task
+[2025-10-17T08:51:33.860+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'csv_etl_pipeline', 'soda_scan', 'scheduled__2025-10-16T20:00:00+00:00', '--job-id', '5', '--raw', '--subdir', 'DAGS_FOLDER/etl.py', '--cfg-path', '/tmp/tmp2w3y4tue']
+[2025-10-17T08:51:33.867+0000] {standard_task_runner.py:85} INFO - Job 5: Subtask soda_scan
+[2025-10-17T08:51:33.943+0000] {task_command.py:416} INFO - Running <TaskInstance: csv_etl_pipeline.soda_scan scheduled__2025-10-16T20:00:00+00:00 [running]> on host 37d538dfd0b6
+[2025-10-17T08:51:34.047+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='csv_etl_pipeline' AIRFLOW_CTX_TASK_ID='soda_scan' AIRFLOW_CTX_EXECUTION_DATE='2025-10-16T20:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-10-16T20:00:00+00:00'
+[2025-10-17T08:51:34.048+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-10-17T08:51:34.049+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'soda scan -d ***_pg -c /opt/***/dags/soda/configuration.yml /opt/***/dags/soda/checks.yml']
+[2025-10-17T08:51:34.062+0000] {subprocess.py:86} INFO - Output:
+[2025-10-17T08:51:35.441+0000] {subprocess.py:93} INFO - [08:51:35] Soda Core 3.5.6
+[2025-10-17T08:51:35.550+0000] {subprocess.py:93} INFO - [08:51:35] Counting invalid without valid or invalid specification does not make sense. ("invalid_count(price) = 0" @ line=9,col=5 in /opt/***/dags/soda/checks.yml)
+[2025-10-17T08:51:35.553+0000] {subprocess.py:93} INFO - [08:51:35] Scan summary:
+[2025-10-17T08:51:35.554+0000] {subprocess.py:93} INFO - [08:51:35] 6/6 checks PASSED:
+[2025-10-17T08:51:35.554+0000] {subprocess.py:93} INFO - [08:51:35]     games in ***_pg
+[2025-10-17T08:51:35.554+0000] {subprocess.py:93} INFO - [08:51:35]       row_count > 0 [PASSED]
+[2025-10-17T08:51:35.554+0000] {subprocess.py:93} INFO - [08:51:35]       missing_count(game) = 0 [PASSED]
+[2025-10-17T08:51:35.554+0000] {subprocess.py:93} INFO - [08:51:35]       duplicate_count(urlgame) = 0 [PASSED]
+[2025-10-17T08:51:35.554+0000] {subprocess.py:93} INFO - [08:51:35]     prices in ***_pg
+[2025-10-17T08:51:35.555+0000] {subprocess.py:93} INFO - [08:51:35]       row_count = 0 [PASSED]
+[2025-10-17T08:51:35.555+0000] {subprocess.py:93} INFO - [08:51:35]       missing_count(price) = 0 [PASSED]
+[2025-10-17T08:51:35.555+0000] {subprocess.py:93} INFO - [08:51:35]       invalid_count(price) = 0 [PASSED]
+[2025-10-17T08:51:35.555+0000] {subprocess.py:93} INFO - [08:51:35] All is good. No failures. No warnings. No errors.
+[2025-10-17T08:51:35.908+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-10-17T08:51:35.951+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=csv_etl_pipeline, task_id=soda_scan, execution_date=20251016T200000, start_date=20251017T085133, end_date=20251017T085135
+[2025-10-17T08:51:36.000+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-10-17T08:51:36.027+0000] {taskinstance.py:2778} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-10-17T08:54:54.998+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: csv_etl_pipeline.soda_scan scheduled__2025-10-16T20:00:00+00:00 [queued]>
+[2025-10-17T08:54:55.007+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: csv_etl_pipeline.soda_scan scheduled__2025-10-16T20:00:00+00:00 [queued]>
+[2025-10-17T08:54:55.007+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2025-10-17T08:54:55.018+0000] {taskinstance.py:1382} INFO - Executing <Task(BashOperator): soda_scan> on 2025-10-16 20:00:00+00:00
+[2025-10-17T08:54:55.025+0000] {standard_task_runner.py:57} INFO - Started process 80 to run task
+[2025-10-17T08:54:55.029+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'csv_etl_pipeline', 'soda_scan', 'scheduled__2025-10-16T20:00:00+00:00', '--job-id', '5', '--raw', '--subdir', 'DAGS_FOLDER/etl.py', '--cfg-path', '/tmp/tmpdtllwgvn']
+[2025-10-17T08:54:55.032+0000] {standard_task_runner.py:85} INFO - Job 5: Subtask soda_scan
+[2025-10-17T08:54:55.076+0000] {task_command.py:416} INFO - Running <TaskInstance: csv_etl_pipeline.soda_scan scheduled__2025-10-16T20:00:00+00:00 [running]> on host 7a3806afa772
+[2025-10-17T08:54:55.145+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='csv_etl_pipeline' AIRFLOW_CTX_TASK_ID='soda_scan' AIRFLOW_CTX_EXECUTION_DATE='2025-10-16T20:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-10-16T20:00:00+00:00'
+[2025-10-17T08:54:55.146+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-10-17T08:54:55.147+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'soda scan -d ***_pg -c /opt/***/dags/soda/configuration.yml /opt/***/dags/soda/checks.yml']
+[2025-10-17T08:54:55.160+0000] {subprocess.py:86} INFO - Output:
+[2025-10-17T08:54:56.180+0000] {subprocess.py:93} INFO - [08:54:56] Soda Core 3.5.6
+[2025-10-17T08:54:56.259+0000] {subprocess.py:93} INFO - [08:54:56] Counting invalid without valid or invalid specification does not make sense. ("invalid_count(price) = 0" @ line=9,col=5 in /opt/***/dags/soda/checks.yml)
+[2025-10-17T08:54:56.262+0000] {subprocess.py:93} INFO - [08:54:56] Scan summary:
+[2025-10-17T08:54:56.262+0000] {subprocess.py:93} INFO - [08:54:56] 6/6 checks PASSED:
+[2025-10-17T08:54:56.262+0000] {subprocess.py:93} INFO - [08:54:56]     games in ***_pg
+[2025-10-17T08:54:56.262+0000] {subprocess.py:93} INFO - [08:54:56]       row_count > 0 [PASSED]
+[2025-10-17T08:54:56.262+0000] {subprocess.py:93} INFO - [08:54:56]       missing_count(game) = 0 [PASSED]
+[2025-10-17T08:54:56.263+0000] {subprocess.py:93} INFO - [08:54:56]       duplicate_count(urlgame) = 0 [PASSED]
+[2025-10-17T08:54:56.263+0000] {subprocess.py:93} INFO - [08:54:56]     prices in ***_pg
+[2025-10-17T08:54:56.263+0000] {subprocess.py:93} INFO - [08:54:56]       row_count = 0 [PASSED]
+[2025-10-17T08:54:56.263+0000] {subprocess.py:93} INFO - [08:54:56]       missing_count(price) = 0 [PASSED]
+[2025-10-17T08:54:56.263+0000] {subprocess.py:93} INFO - [08:54:56]       invalid_count(price) = 0 [PASSED]
+[2025-10-17T08:54:56.263+0000] {subprocess.py:93} INFO - [08:54:56] All is good. No failures. No warnings. No errors.
+[2025-10-17T08:54:56.490+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-10-17T08:54:56.513+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=csv_etl_pipeline, task_id=soda_scan, execution_date=20251016T200000, start_date=20251017T085454, end_date=20251017T085456
+[2025-10-17T08:54:56.566+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-10-17T08:54:56.585+0000] {taskinstance.py:2778} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-10-17T09:02:35.324+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: csv_etl_pipeline.soda_scan scheduled__2025-10-16T20:00:00+00:00 [queued]>
+[2025-10-17T09:02:35.331+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: csv_etl_pipeline.soda_scan scheduled__2025-10-16T20:00:00+00:00 [queued]>
+[2025-10-17T09:02:35.331+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2025-10-17T09:02:35.341+0000] {taskinstance.py:1382} INFO - Executing <Task(BashOperator): soda_scan> on 2025-10-16 20:00:00+00:00
+[2025-10-17T09:02:35.347+0000] {standard_task_runner.py:57} INFO - Started process 80 to run task
+[2025-10-17T09:02:35.353+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'csv_etl_pipeline', 'soda_scan', 'scheduled__2025-10-16T20:00:00+00:00', '--job-id', '5', '--raw', '--subdir', 'DAGS_FOLDER/etl.py', '--cfg-path', '/tmp/tmp2d1k19p9']
+[2025-10-17T09:02:35.358+0000] {standard_task_runner.py:85} INFO - Job 5: Subtask soda_scan
+[2025-10-17T09:02:35.409+0000] {task_command.py:416} INFO - Running <TaskInstance: csv_etl_pipeline.soda_scan scheduled__2025-10-16T20:00:00+00:00 [running]> on host 53e08e0285d6
+[2025-10-17T09:02:35.469+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='csv_etl_pipeline' AIRFLOW_CTX_TASK_ID='soda_scan' AIRFLOW_CTX_EXECUTION_DATE='2025-10-16T20:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-10-16T20:00:00+00:00'
+[2025-10-17T09:02:35.471+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-10-17T09:02:35.471+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'soda scan -d ***_pg -c /opt/***/dags/soda/configuration.yml /opt/***/dags/soda/checks.yml']
+[2025-10-17T09:02:35.482+0000] {subprocess.py:86} INFO - Output:
+[2025-10-17T09:02:36.443+0000] {subprocess.py:93} INFO - [09:02:36] Soda Core 3.5.6
+[2025-10-17T09:02:36.514+0000] {subprocess.py:93} INFO - [09:02:36] Counting invalid without valid or invalid specification does not make sense. ("invalid_count(price) = 0" @ line=9,col=5 in /opt/***/dags/soda/checks.yml)
+[2025-10-17T09:02:36.516+0000] {subprocess.py:93} INFO - [09:02:36] Scan summary:
+[2025-10-17T09:02:36.516+0000] {subprocess.py:93} INFO - [09:02:36] 6/6 checks PASSED:
+[2025-10-17T09:02:36.517+0000] {subprocess.py:93} INFO - [09:02:36]     games in ***_pg
+[2025-10-17T09:02:36.517+0000] {subprocess.py:93} INFO - [09:02:36]       row_count > 0 [PASSED]
+[2025-10-17T09:02:36.517+0000] {subprocess.py:93} INFO - [09:02:36]       missing_count(game) = 0 [PASSED]
+[2025-10-17T09:02:36.517+0000] {subprocess.py:93} INFO - [09:02:36]       duplicate_count(urlgame) = 0 [PASSED]
+[2025-10-17T09:02:36.517+0000] {subprocess.py:93} INFO - [09:02:36]     prices in ***_pg
+[2025-10-17T09:02:36.517+0000] {subprocess.py:93} INFO - [09:02:36]       row_count = 0 [PASSED]
+[2025-10-17T09:02:36.517+0000] {subprocess.py:93} INFO - [09:02:36]       missing_count(price) = 0 [PASSED]
+[2025-10-17T09:02:36.517+0000] {subprocess.py:93} INFO - [09:02:36]       invalid_count(price) = 0 [PASSED]
+[2025-10-17T09:02:36.517+0000] {subprocess.py:93} INFO - [09:02:36] All is good. No failures. No warnings. No errors.
+[2025-10-17T09:02:36.777+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-10-17T09:02:36.805+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=csv_etl_pipeline, task_id=soda_scan, execution_date=20251016T200000, start_date=20251017T090235, end_date=20251017T090236
+[2025-10-17T09:02:36.848+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-10-17T09:02:36.870+0000] {taskinstance.py:2778} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-10-17T09:09:06.287+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: csv_etl_pipeline.soda_scan scheduled__2025-10-16T20:00:00+00:00 [queued]>
+[2025-10-17T09:09:06.300+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: csv_etl_pipeline.soda_scan scheduled__2025-10-16T20:00:00+00:00 [queued]>
+[2025-10-17T09:09:06.301+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2025-10-17T09:09:06.318+0000] {taskinstance.py:1382} INFO - Executing <Task(BashOperator): soda_scan> on 2025-10-16 20:00:00+00:00
+[2025-10-17T09:09:06.327+0000] {standard_task_runner.py:57} INFO - Started process 92 to run task
+[2025-10-17T09:09:06.331+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'csv_etl_pipeline', 'soda_scan', 'scheduled__2025-10-16T20:00:00+00:00', '--job-id', '6', '--raw', '--subdir', 'DAGS_FOLDER/etl.py', '--cfg-path', '/tmp/tmpn8x4k7h3']
+[2025-10-17T09:09:06.335+0000] {standard_task_runner.py:85} INFO - Job 6: Subtask soda_scan
+[2025-10-17T09:09:06.396+0000] {task_command.py:416} INFO - Running <TaskInstance: csv_etl_pipeline.soda_scan scheduled__2025-10-16T20:00:00+00:00 [running]> on host 0c9ee2dc6164
+[2025-10-17T09:09:06.491+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='csv_etl_pipeline' AIRFLOW_CTX_TASK_ID='soda_scan' AIRFLOW_CTX_EXECUTION_DATE='2025-10-16T20:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-10-16T20:00:00+00:00'
+[2025-10-17T09:09:06.493+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-10-17T09:09:06.495+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'soda scan -d ***_pg -c /opt/***/dags/soda/configuration.yml /opt/***/dags/soda/checks.yml']
+[2025-10-17T09:09:06.514+0000] {subprocess.py:86} INFO - Output:
+[2025-10-17T09:09:07.699+0000] {subprocess.py:93} INFO - [09:09:07] Soda Core 3.5.6
+[2025-10-17T09:09:07.812+0000] {subprocess.py:93} INFO - [09:09:07] Counting invalid without valid or invalid specification does not make sense. ("invalid_count(price) = 0" @ line=9,col=5 in /opt/***/dags/soda/checks.yml)
+[2025-10-17T09:09:07.814+0000] {subprocess.py:93} INFO - [09:09:07] Scan summary:
+[2025-10-17T09:09:07.814+0000] {subprocess.py:93} INFO - [09:09:07] 6/6 checks PASSED:
+[2025-10-17T09:09:07.815+0000] {subprocess.py:93} INFO - [09:09:07]     games in ***_pg
+[2025-10-17T09:09:07.815+0000] {subprocess.py:93} INFO - [09:09:07]       row_count > 0 [PASSED]
+[2025-10-17T09:09:07.815+0000] {subprocess.py:93} INFO - [09:09:07]       missing_count(game) = 0 [PASSED]
+[2025-10-17T09:09:07.815+0000] {subprocess.py:93} INFO - [09:09:07]       duplicate_count(urlgame) = 0 [PASSED]
+[2025-10-17T09:09:07.815+0000] {subprocess.py:93} INFO - [09:09:07]     prices in ***_pg
+[2025-10-17T09:09:07.815+0000] {subprocess.py:93} INFO - [09:09:07]       row_count = 0 [PASSED]
+[2025-10-17T09:09:07.815+0000] {subprocess.py:93} INFO - [09:09:07]       missing_count(price) = 0 [PASSED]
+[2025-10-17T09:09:07.815+0000] {subprocess.py:93} INFO - [09:09:07]       invalid_count(price) = 0 [PASSED]
+[2025-10-17T09:09:07.815+0000] {subprocess.py:93} INFO - [09:09:07] All is good. No failures. No warnings. No errors.
+[2025-10-17T09:09:08.102+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-10-17T09:09:08.128+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=csv_etl_pipeline, task_id=soda_scan, execution_date=20251016T200000, start_date=20251017T090906, end_date=20251017T090908
+[2025-10-17T09:09:08.149+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-10-17T09:09:08.174+0000] {taskinstance.py:2778} INFO - 1 downstream tasks scheduled from follow-on schedule check

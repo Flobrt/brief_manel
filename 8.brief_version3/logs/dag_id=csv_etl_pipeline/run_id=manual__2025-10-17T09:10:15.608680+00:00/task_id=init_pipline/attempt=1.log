@@ -1,0 +1,14 @@
+[2025-10-17T09:10:17.804+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: csv_etl_pipeline.init_pipline manual__2025-10-17T09:10:15.608680+00:00 [queued]>
+[2025-10-17T09:10:17.812+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: csv_etl_pipeline.init_pipline manual__2025-10-17T09:10:15.608680+00:00 [queued]>
+[2025-10-17T09:10:17.812+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2025-10-17T09:10:17.822+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): init_pipline> on 2025-10-17 09:10:15.608680+00:00
+[2025-10-17T09:10:17.828+0000] {standard_task_runner.py:57} INFO - Started process 139 to run task
+[2025-10-17T09:10:17.833+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'csv_etl_pipeline', 'init_pipline', 'manual__2025-10-17T09:10:15.608680+00:00', '--job-id', '11', '--raw', '--subdir', 'DAGS_FOLDER/etl.py', '--cfg-path', '/tmp/tmpiq25ork7']
+[2025-10-17T09:10:17.836+0000] {standard_task_runner.py:85} INFO - Job 11: Subtask init_pipline
+[2025-10-17T09:10:17.882+0000] {task_command.py:416} INFO - Running <TaskInstance: csv_etl_pipeline.init_pipline manual__2025-10-17T09:10:15.608680+00:00 [running]> on host 0c9ee2dc6164
+[2025-10-17T09:10:17.947+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='csv_etl_pipeline' AIRFLOW_CTX_TASK_ID='init_pipline' AIRFLOW_CTX_EXECUTION_DATE='2025-10-17T09:10:15.608680+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-10-17T09:10:15.608680+00:00'
+[2025-10-17T09:10:17.954+0000] {logging_mixin.py:154} INFO - Nombre de jeux : 3
+[2025-10-17T09:10:17.955+0000] {python.py:194} INFO - Done. Returned value was: {"id":{"0":1,"1":2,"2":3},"urlgame":{"0":"https:\/\/www.instant-gaming.com\/en\/8003-buy-celeste-pc-mac-game-steam\/","1":"https:\/\/www.instant-gaming.com\/en\/2198-buy-hollow-knight-pc-mac-steam\/","2":"https:\/\/www.instant-gaming.com\/en\/4824-buy-elden-ring-pc-steam\/"},"game":{"0":"Celeste","1":"Hollow Knight","2":"Elden ring"}}
+[2025-10-17T09:10:17.974+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=csv_etl_pipeline, task_id=init_pipline, execution_date=20251017T091015, start_date=20251017T091017, end_date=20251017T091017
+[2025-10-17T09:10:18.004+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-10-17T09:10:18.031+0000] {taskinstance.py:2778} INFO - 1 downstream tasks scheduled from follow-on schedule check
